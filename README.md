@@ -1,6 +1,6 @@
 # my-interview-prep
 
-HTML:
+### ***HTML***
 • What is the purpose of the doctype declaration?
 
 The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
@@ -10,7 +10,7 @@ The DOCTYPE declaration is an instruction to the web browser about what version 
 <div> element is for organising content in a block level structure. It takes full width of the screen or the width of the parent. It always start in a new line.
 <span> element is for organising content in a inile level. It wrap around a part of the text, links or an image.
 
-CSS:
+### ***CSS***
 • What is the box model in CSS?
 
 For very element, a box is wrapped around them. It has four parts; content, padding, border, margin.
@@ -331,7 +331,7 @@ React has two stages for each phase:render phase, commit phase.
   - This method is being called when DOM needs to be removed
   - It has 1 method:componentWillUnmount()
     * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing aany subscription, network calls or canceling any timers
-    
+
 React Hooks:
 • Explain the use of the useState hook in React.
 • What is the useEffect hook, and why is it used?
