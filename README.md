@@ -22,6 +22,7 @@ If we set a width & height to the element. The actual width and height of the el
 So, totalWidth = width + leftPadding + rightPadding + leftBorder + rightBorder
 totalHeight =  height + topPadding + bottomPadding + topBorder + bottomBorder
 The box width &  height stops at the border.
+
 ![Alt text](image.png)
 
 • Describe the difference between margin and padding.
@@ -33,25 +34,35 @@ Padding is the space between the border and the content. It is usefull to expand
 
 • What is the flexbox model, and how does it work?
 ![Alt text](image-6.png)
+
 It allow us to arrange the divs. The parent should have a display:flex property to consider it as a flexbox model. display:block align the child divs in each line by taing enitre width of the container. But display:flex by default align the child div inline.
+
 ![Alt text](image-4.png)
 We can set the direction by using flex-direction:row/column property. Bydefault it will be row. Another option to change the order div and the postion by setting flex-direction:row-reverse/column-reverse. All these works on the main axis or x-axis. Even for column. It just make the x-axis to verticaly align.
+
 ![Alt text](image-3.png)
 ![Alt text](image-2.png)
+
 To align items in the main axis, can use jstify-content:flex-start/flex-end/centre/space-between/space-around.
 The space-between equaly add space between the child divs and fill the container. The space-around add equal space between child also add calculate half of the space between the two child divs and add it to before first child div and after last child div. So there will be a gap between the container and the first and last child divs.
+
 ![Alt text](image-1.png)
+
 To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch/baseline. Stretch will tae up the entire cross axis for the child div. Baseline, moves childs to up of the cross-axis.
 To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/stretch/baseline. It affects only to that partiular div not every child div.
+
 ![Alt text](image-5.png)
 
 
 • Explain the purpose of justify-content and align-items in flexbox.
 To align items in the main axis, can use jstify-content:flex-start/flex-end/centre/space-between/space-around.
 The space-between equaly add space between the child divs and fill the container. The space-around add equal space between child also add calculate half of the space between the two child divs and add it to before first child div and after last child div. So there will be a gap between the container and the first and last child divs.
+
 ![Alt text](image-1.png)
+
 To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch/baseline. Stretch will tae up the entire cross axis for the child div. Baseline, moves childs to up of the cross-axis.
 To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/stretch/baseline. It affects only to that partiular div not every child div.
+
 ![Alt text](image-5.png)
 
 ### ***CSS Grid***
@@ -65,7 +76,7 @@ Grid is 2D. It can control both row and column arrangement simultaneusly. It is 
 To set the width of each column in grid. It can be set using grid-template-column:w1 w2 w3 or grid-template-column:repeat(no.Column, width).
 https://www.freecodecamp.org/news/css-grid-tutorial-with-cheatsheet/#the-justify-items-property
 
-Responsive Design:
+### ***Responsive Design***
 • What is the importance of media queries in responsive design?
 
 Using media queries, a website can be optimised by changing the layout & content for various screen size. Also, it can improve the performance by loading only neccessary features and styles. It makes the website more faster. Responsiveness helps to avoid horizontal scrolling, distorted images.  It makes the application more user friendly and flexible to different screen size.
@@ -86,7 +97,7 @@ The `rem` font size is relative to the base font-size or root font. By default t
   font-size: 1rem; /* equal to 16px, relative to base font size */
 }
 
-JavaScript Basics:
+### ***JavaScript Basics***
 • Explain the concept of hoisting in JavaScript.
 
 Hoisting is a phenomena in which variables and functions can be accessed before its initialisation.
@@ -142,7 +153,9 @@ JavaScript Functions:
 • What is a closure in JavaScript?
 
 A function along with its lexical scope or a function binds together with its lexical enviornment.
+
 [![Alt text](image-8.png)](https://www.youtube.com/watch?v=qikxEIxsXco)
+
 Eg:
 ```
 function parent(){
