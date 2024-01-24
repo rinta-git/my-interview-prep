@@ -90,6 +90,7 @@ JavaScript Basics:
 Hoisting is a phenomena in which variables and functions can be accessed before its initialisation.
 [![Alt text](image-7.png)](https://www.youtube.com/watch?v=Fnlnw8uY6jo)
 Eg:
+```
 getName();
 console.log(x)
 var x=10;
@@ -101,7 +102,7 @@ o/p
 ----
 Anu Thomas
 undefined
-
+```
 • What is the difference between let, const, and var?
 
 Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw reference error: variable __ cannot be accessed before its initialisation. It is due to we are trying to access it when they are in temporal deadzone. Temporal dead zone start from variable declaration to initialisation. Both the variable can not be redeclared in the same scope. It will throw reference error: variable __ being already declared. Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.
@@ -109,6 +110,7 @@ const variable must initialised with a value otherwise throw syntax error: missi
 Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not aany errors.
 
 Eg:
+```
 var x;
 console.log(x);
 x=10;
@@ -133,13 +135,14 @@ undefined
 100 Hello
 syntx error:missing initialiser in const declaration
 10
-
+```
 JavaScript Functions:
 • What is a closure in JavaScript?
 
 A function along with its lexical scope or a function binds together with its lexical enviornment.
 [![Alt text](image-8.png)](https://www.youtube.com/watch?v=qikxEIxsXco)
 Eg:
+```
 function parent(){
   let a = 123;
   funtion child(){
@@ -155,8 +158,9 @@ o/p:
 ----
 123 //here, child fn is in closure. Out i able to print 123 since child is stored along with its parent()
 lexical enviornment
-
+```
 Eg2:
+```
 function sample(){
   let a = 'hello'
   setTimeout(() => {
@@ -166,7 +170,7 @@ function sample(){
 o/p:
 ----
 hello //printed after 3ms
-
+```
 
 • Explain the differences between arrow functions and regular functions.
 
@@ -179,12 +183,14 @@ DOM Manipulation:
 
 Event delegation happens in bubbling up phase. So in this, an event listener is attached to the parent element. If the event occure in child it is bubbled up to the parent, grand parent and so on till it reaches the root document.
 Adv. of event delegation is that 1)performance improvement:only a single event listener is needed for every child. It will save memory by not attaching individual event listeners to every child element. 2) Support dynamic elements: can add or remove more child elements, by default the event for those child is registered with the parent. 3)Less code: handling a single event listener reduces the code length.
+
 [![Alt text](image-9.png)](https://www.youtube.com/watch?v=3KJI1WZGDrg)
 
 • Explain the purpose of the data- attributes.
 
 It is for storing custom data in semantic html elements. It follows a syntax data-*. The data can be accessed inside js using dataset rpoperty. Also, can be used in css.
 Eg;
+```
 <article
 id="content"
 name="content"
@@ -202,7 +208,7 @@ data-index-number=3
     color:red;
   }
 </style>
-
+```
 AJAX:
 • What is AJAX, and how does it work?
 
@@ -306,7 +312,26 @@ There are three phases for component life cycle methods
 - Unmounting
 ![Alt text](image-10.png)
 
-
+React has two stages for each phase:render phase, commit phase.
+- Mounting:
+  - It occure when component is first created and inserted to the DOM
+  - It has 4 methods:constructor(), getDerivedStateFromProps(), render(), componentDidMount()
+      * Constructor(): It is for initializing the state and bind its methods to component's instance. Inside    constructor super(props) must be done, otherwise the props will be undefined.
+      * getDerivedStateFromProps(): It is being called after constructor() before render(). It is for updating the current state based on the changes in props. It should retrun an object to update the state or null.
+      * render(): It is for generating the virtual DOM of the component with the current state and props. It is   being called each time the state or props changed, or the parents component got re-rendered. It retrun JSX.    
+      * componentDidMount():It will occure after mounting stage. So that it can fill the data and re-render the component. It is used for making API calls.
+- Updating:
+ - It is being done when component is re-rendered.
+ - It has 4 methods: getDerivedStateFromProps(), shouldComponentUpdate(),  render(), componentDidUpdate(prevProps, prevState)
+    * getDerivedStateFromProps(): It is called after constructor() but before render(). It is used for updating the state based on changes in props. It should return an object to update the state or null.
+    * shouldComponentUpdate(nextProps, nextState): It is not called on initial render. It is for performance optimization. This method will make sure components behaviour will not get affected by current change in state or props. It returns true by default. It is called before render().
+    * render(): It is for creating virtual DOM of the component with current state and props.  It is being called each time when component's state or props changes. It returns JSX.
+    * componentDidUpdate(prevProps, prevState):It is called after updatE BUT not after initial render. This also can be used for making API calls based on newly updated props.
+- Unmounting: 
+  - This method is being called when DOM needs to be removed
+  - It has 1 method:componentWillUnmount()
+    * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing aany subscription, network calls or canceling any timers
+    
 React Hooks:
 • Explain the use of the useState hook in React.
 • What is the useEffect hook, and why is it used?
