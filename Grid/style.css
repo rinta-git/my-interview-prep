@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    font-size: 40px;
+    width: 100%;
+    min-height: 100vh;
+  }
+  [class^="box-"] {
+    background-color: skyblue;
+  
+  /* To place the letter at the center */
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+    column-gap:  10px;
+    row-gap:  50px;
+    gap: 20px;
+
+    grid-template-columns: repeat(3,100px); /*To repeat the width for every column, 3 number of columns with 100px width*/
+    grid-template-columns: 200px auto 100px; /*To set width of each column 200 for 1st, auto for second, 100px for third*/
+    grid-template-rows: repeat(3,100px); /*To repeat the height for every row, 3 number of rows with 100px height*/
+    grid-template-rows: 200px auto 100px; /*To set height of each row 200 for 1st, auto for second, 100px for third*/ 
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+
+    justify-items : end;
+
+  }
