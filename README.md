@@ -1,6 +1,6 @@
 # my-interview-prep
 
-HTML:
+## HTML:
 
 • What is the purpose of the doctype declaration?
 
