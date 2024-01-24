@@ -101,7 +101,9 @@ The `rem` font size is relative to the base font-size or root font. By default t
 • Explain the concept of hoisting in JavaScript.
 
 Hoisting is a phenomena in which variables and functions can be accessed before its initialisation.
+
 [![Alt text](image-7.png)](https://www.youtube.com/watch?v=Fnlnw8uY6jo)
+
 Eg:
 ```
 getName();
@@ -347,13 +349,25 @@ React has two stages for each phase:render phase, commit phase.
   - It has 1 method:componentWillUnmount()
     * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing aany subscription, network calls or canceling any timers
 
-React Hooks:
+### ***React Hooks***
 • Explain the use of the useState hook in React.
+
+It is for keeping local variables of a component. It takes initial value for state and return the current state and state setter function to update the state. It works with array, obj, strings etc.
+
 • What is the useEffect hook, and why is it used?
 
-Redux:
+It is for doing life cycle methods in functional component. It accepts two args. One is a callback fn, second optional dependancy array. If dependency array is not there, the callback fn will called on each render. If an empty array passed as second argument then the callback fn will called only once(componentDidMount). If the dependency array has any state variable then the callback fn will get executed each time when the state gets updated(componentDidUpdate). To do compenentWillUnmount in functional component, return from callback fn of useEffect hook.
+
+### ***Redux***
 • What problem does Redux solve in a React application?
+
+Redux is for managing the state. There will be a store where the state is maintained and all the components who subscribed to the store has access to it. It is more convinient and improve the performance. When it comes to larger application, managing the state and updating the state by passing through all the component tree is very difficult and confusing. Redux solves this problem. When the state gets updated by default all the component who are subscribed to the store get notified. Using redux developer tools can see the history of the state and current value. It is easy to debug also. 
+
 • Explain the roles of actions, reducers, and the store in Redux.
+
+![Alt text](image-11.png)
+
+Store is the place where all the data of the application is stored. It is a global store so components who have subscription to the store can access it. An action will tell the reducer what type of action to be done and the information or the data. The reducer will be the one doing that type of action and returning a new instance of the state.
 
 Web Performance Optimization:
 • How can you optimize website performance?
