@@ -113,7 +113,7 @@ const variable must initialised with a value otherwise throw syntax error: missi
 Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not aany errors.
 
 Eg:
-```
+`code(
 var x;
 console.log(x);
 x=10;
@@ -138,7 +138,7 @@ undefined
 100 Hello
 syntx error:missing initialiser in const declaration
 10
-```
+)`
 JavaScript Functions:
 • What is a closure in JavaScript?
 
