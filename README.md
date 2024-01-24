@@ -5,7 +5,7 @@
 
 The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
 
-• Explain the difference between <div> and <span>.
+• Explain the difference between `<div>` and `<span>`.
 
 <div> element is for organising content in a block level structure. It takes full width of the screen or the width of the parent. It always start in a new line.
 <span> element is for organising content in a inile level. It wrap around a part of the text, links or an image.
@@ -29,7 +29,7 @@ The box width &  height stops at the border.
 Margin is space around the border. It is usefull wen you want to make a space between elements or position an element. Margin allow auto setting and negative values. Also, it can be used for overlapping on another element by setting negative values. It will not impacted by styling of other elements.
 Padding is the space between the border and the content. It is usefull to expand the space of the content with the border. For eg; add space between text and the border of a button. There is no auto settin and negative values in padding. It can be impacted by styling of other elements.
 
-CSS Flexbox:
+### ***CSS Flexbox***
 
 • What is the flexbox model, and how does it work?
 ![Alt text](image-6.png)
@@ -54,7 +54,7 @@ To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch
 To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/stretch/baseline. It affects only to that partiular div not every child div.
 ![Alt text](image-5.png)
 
-CSS Grid:
+### ***CSS Grid***
 
 • How does CSS Grid differ from Flexbox?
 
@@ -211,7 +211,7 @@ data-index-number=3
   }
 </style>
 ```
-AJAX:
+### ***AJAX***
 • What is AJAX, and how does it work?
 
 AJAX, asynchronous javascript xml: It allow a website update its content without reloading the entire page.
@@ -226,7 +226,7 @@ browser create a js call -> this call create a XMLHttpRequest object -> sends a 
 Eg; Google search engine; suggest keyword while typing the search keywords without reloading the page
 Eg2; Chat option on website to the customer service. We cancontinue chating while exploring the site without reloading the page
 
-RESTful API Concepts:
+### ***RESTful API Concepts***
 • What is REST, and how does it differ from SOAP?
 
 SOAP:Simple object access protocole. It follws a protocole or certain rules to get data.Its complex
@@ -244,7 +244,7 @@ Delete: delete the data from server
 Head: Read data, but only return header not the body of the response
 Options: Read info about the available communication options of the resource
 
-React Basics:
+### ***React Basics***
 • What is JSX in React?
 
 JSX is a syntax to write html like syntax in js. It is transpiled or converted before it reaches the JSE. It is done by babel pkg.
@@ -253,7 +253,7 @@ JSX is a syntax to write html like syntax in js. It is transpiled or converted b
 
 State in react is a local variable to maintane the state in component. useState() hook is for creating state variable. It re-render the component whenever the state gets updated. If we use normal local variable instead of state this component re-rendering will not happen when its get updated.
 
-React Components:
+### ***React Components***
 • Differentiate between functional and class components in React.
 
 Functional components are javascript functions. It is also called stateless component as it doesn't have their state and lifecycle methods. It is more efficient and easy to code. It uses react's useState() hook to maintane the state and useEffect() hook to handle life cycle methods. It accepts props as input and return jsx as output.
