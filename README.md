@@ -1,6 +1,7 @@
 # my-interview-prep
 
 HTML:
+
 • What is the purpose of the doctype declaration?
 
 The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
@@ -30,6 +31,7 @@ Margin is space around the border. It is usefull wen you want to make a space be
 Padding is the space between the border and the content. It is usefull to expand the space of the content with the border. For eg; add space between text and the border of a button. There is no auto settin and negative values in padding. It can be impacted by styling of other elements.
 
 CSS Flexbox:
+
 • What is the flexbox model, and how does it work?
 ![Alt text](image-6.png)
 It allow us to arrange the divs. The parent should have a display:flex property to consider it as a flexbox model. display:block align the child divs in each line by taing enitre width of the container. But display:flex by default align the child div inline.
@@ -54,6 +56,7 @@ To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/s
 ![Alt text](image-5.png)
 
 CSS Grid:
+
 • How does CSS Grid differ from Flexbox?
 
 Flexbox is 1D. So it can be arranged either in row direction or column direction. It is useful for creating simple layouts with single row or single column.
