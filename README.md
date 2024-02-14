@@ -7,27 +7,27 @@ The DOCTYPE declaration is an instruction to the web browser about what version 
 
 • Explain the difference between `<div>` and `<span>`.
 
-<div> element is for organising content in a block level structure. It takes full width of the screen or the width of the parent. It always start in a new line.
-<span> element is for organising content in a inile level. It wrap around a part of the text, links or an image.
+`<div></div>` element is for organising content in a block level structure. It takes full width of the screen or the width of the parent. It always start in a new line.
+`<span></span>` element is for organising content in a inile level. It wrap around a part of the text, links or an image.
 
 ### ***CSS***
 • What is the box model in CSS?
 
 For very element, a box is wrapped around them. It has four parts; content, padding, border, margin.
-Content: Is the area where text & images are incuded
-padding: A space around content. It is transparent
-Border: A border is surrounded to the padding & content
-Margin: A space aruond the border. It is transparent
-If we set a width & height to the element. The actual width and height of the element is calculated by adding the space taken for padding and border.
-So, totalWidth = width + leftPadding + rightPadding + leftBorder + rightBorder
-totalHeight =  height + topPadding + bottomPadding + topBorder + bottomBorder
-The box width &  height stops at the border.
+Content: Is the area where text & images are incuded.<br />
+padding: A space around content. It is transparent.<br />
+Border: A border is surrounded to the padding & content.<br />
+Margin: A space aruond the border. It is transparent.<br />
+If we set a width & height to the element. The actual width and height of the element is calculated by adding the space taken for padding and border.<br />
+So, totalWidth = width + leftPadding + rightPadding + leftBorder + rightBorder.<br />
+totalHeight =  height + topPadding + bottomPadding + topBorder + bottomBorder.<br />
+The box width &  height stops at the border.<br />
 
 ![Alt text](image.png)
 
 • Describe the difference between margin and padding.
 
-Margin is space around the border. It is usefull wen you want to make a space between elements or position an element. Margin allow auto setting and negative values. Also, it can be used for overlapping on another element by setting negative values. It will not impacted by styling of other elements.
+Margin is space around the border. It is usefull wen you want to make a space between elements or position an element. Margin allow auto setting and negative values. Also, it can be used for overlapping on another element by setting negative values. It will not impacted by styling of other elements.<br />
 Padding is the space between the border and the content. It is usefull to expand the space of the content with the border. For eg; add space between text and the border of a button. There is no auto settin and negative values in padding. It can be impacted by styling of other elements.
 
 ### ***CSS Flexbox***
@@ -54,13 +54,14 @@ To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/s
 ![Alt text](image-5.png)
 
 
-• Explain the purpose of justify-content and align-items in flexbox.
+• Explain the purpose of justify-content and align-items in flexbox.<br />
+
 To align items in the main axis, can use jstify-content:flex-start/flex-end/centre/space-between/space-around.
 The space-between equaly add space between the child divs and fill the container. The space-around add equal space between child also add calculate half of the space between the two child divs and add it to before first child div and after last child div. So there will be a gap between the container and the first and last child divs.
 
 ![Alt text](image-1.png)
 
-To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch/baseline. Stretch will tae up the entire cross axis for the child div. Baseline, moves childs to up of the cross-axis.
+To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch/baseline. Stretch will take up the entire cross axis for the child div. Baseline, moves childs to up of the cross-axis.
 To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/stretch/baseline. It affects only to that partiular div not every child div.
 
 ![Alt text](image-5.png)
@@ -72,7 +73,7 @@ To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/s
 Flexbox is 1D. So it can be arranged either in row direction or column direction. It is useful for creating simple layouts with single row or single column.
 Grid is 2D. It can control both row and column arrangement simultaneusly. It is usefull to create more complex layout.
 
-• Explain the use of the grid-template-columns property.
+• Explain the use of the grid-template-columns property.<br />
 To set the width of each column in grid. It can be set using grid-template-column:w1 w2 w3 or grid-template-column:repeat(no.Column, width).
 https://www.freecodecamp.org/news/css-grid-tutorial-with-cheatsheet/#the-justify-items-property
 
@@ -84,7 +85,7 @@ Using media queries, a website can be optimised by changing the layout & content
 • Describe the difference between em and rem units in CSS.
 
 Both are units of measurement of font size. `em` font size is relative to its parent's font size. Eg; If the parent font size is 16px then 1em of the child is equal to 16px. 0.5em of the child is equal to 8px(half of the parent's font size)
-The `rem` font size is relative to the base font-size or root font. By default the root font or document font size is 16px, so in this case if any text with 1rem is equal to 16px.
+The `rem` font size is relative to the base font-size or root font. By default the root font or document font size is 16px, so in this case if any text with 1rem is equal to 16px.<br />
 .parent {
   font-size: 16px;
 }
@@ -120,12 +121,13 @@ undefined
 ```
 • What is the difference between let, const, and var?
 
-Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw reference error: variable __ cannot be accessed before its initialisation. It is due to we are trying to access it when they are in temporal deadzone. Temporal dead zone start from variable declaration to initialisation. Both the variable can not be redeclared in the same scope. It will throw reference error: variable __ being already declared. Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.
-const variable must initialised with a value otherwise throw syntax error: missing initializer in const declaration
-Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not aany errors.
+Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw</br> reference error: variable __ cannot be accessed before its initialisation.</br> It is due to we are trying to access it when they are in temporal deadzone.<i>Temporal dead zone start from variable declaration to initialisation.</i> Both the variable can not be redeclared in the same scope. It will throw</br> 
+reference error: variable __ being already declared.</br> Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.</br>
+const variable must initialised with a value otherwise throw</br> syntax error: missing initializer in const declaration</br>
+Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not any errors.
 
 Eg:
-`code(
+```
 var x;
 console.log(x);
 x=10;
@@ -143,6 +145,7 @@ function sample(){
 sample()
 console.log(x)
 
+
 o/p:
 ----
 undefined
@@ -150,8 +153,9 @@ undefined
 100 Hello
 syntx error:missing initialiser in const declaration
 10
-)`
-JavaScript Functions:
+```
+### ****JavaScript Functions:**** 
+
 • What is a closure in JavaScript?
 
 A function along with its lexical scope or a function binds together with its lexical enviornment.
@@ -173,7 +177,7 @@ out();
 
 o/p:
 ----
-123 //here, child fn is in closure. Out i able to print 123 since child is stored along with its parent()
+123 //here, child fn is in closure. Out is able to print 123 since child is stored along with its parent()
 lexical enviornment
 ```
 Eg2:
@@ -193,9 +197,49 @@ hello //printed after 3ms
 
 In case of regular function, we can call the function before its defenition. Its because JS allocate the memory space for that function along with its function defenition.
 In case of arrow function, it should be called after function defenition to work. If it is called it will
-return undefined as result because js is treating this function as a variable. So while calling the function before the declaration, memory space is allocated but value or defenition is not available. So the value is initialised with undefined during memory allocation time.
+return undefined as result because js is treating this function as a variable. So while calling the function before the declaration, memory space is allocated but value or defenition is not available. So the value is initialised with undefined during memory allocation time.</br>
+In regular function it has its on this context. But for arrow function, it has this value from its surrounding or lexical context in which arrow function is created.
+```
+Eg:
+const myObj = {
+  regular: function (){
+    console.log('REGULAR:',this)
+  },
+  arrow: () => {
+    console.log('ARROW:',this)
+  }
+}
+myObj.regular();
+myObj.arrow();
+```
+o/p
+----
+![Alt text](Screenshot-2024-01-12-at-5.46.04-PM.png)</br>
 
-DOM Manipulation:
+In regular function constructor can be created and use value of this. But it is not possible in arrow function as its this value is defined based on its lexical enviornment.
+```
+function regularfn(name,age){
+    this.name = name;
+    this.age = age;
+    console.log(this)
+}
+new regularfn('Rinta',27);
+
+const arrowfn = (name,age) => {
+    this.name = name;
+    this.age = age;
+    console.log(this)
+}
+new arrowfn('Nithin', 29)
+
+o/p
+----
+regularfn {name: 'Rinta', age: 27}
+Uncaught TypeError: arrowfn is not a constructor
+```
+
+
+### ****DOM Manipulation:****
 • How does event delegation work in the DOM?
 
 Event delegation happens in bubbling up phase. So in this, an event listener is attached to the parent element. If the event occure in child it is bubbled up to the parent, grand parent and so on till it reaches the root document.
@@ -205,7 +249,7 @@ Adv. of event delegation is that 1)performance improvement:only a single event l
 
 • Explain the purpose of the data- attributes.
 
-It is for storing custom data in semantic html elements. It follows a syntax data-*. The data can be accessed inside js using dataset rpoperty. Also, can be used in css.
+It is for storing custom data in semantic html elements. It follows a syntax data-*. The data can be accessed inside js using dataset property. Also, can be used in css.
 Eg;
 ```
 <article
@@ -229,11 +273,11 @@ data-index-number=3
 ### ***AJAX***
 • What is AJAX, and how does it work?
 
-AJAX, asynchronous javascript xml: It allow a website update its content without reloading the entire page.
-Flow->
+AJAX, asynchronous javascript xml: It allow a website update its content without reloading the entire page.</br>
+Flow:</br>
 browser create a js call -> this call create a XMLHttpRequest object -> sends a request to web server to update data -> the web server process the request -> sends back a response to browser -> the browser uses js to process the response -> directly update the data from the response to html page without reloading
 Eg; Google search engine; suggest keyword while typing the search keywords without reloading the page
-Eg2; Chat option on website to the customer service. We cancontinue chating while exploring the site without reloading the page
+Eg2; Chat option on website to the customer service. We can continue chating while exploring the site without reloading the page
 
 • Explain the role of the XMLHttpRequest object.
 
@@ -244,20 +288,20 @@ Eg2; Chat option on website to the customer service. We cancontinue chating whil
 ### ***RESTful API Concepts***
 • What is REST, and how does it differ from SOAP?
 
-SOAP:Simple object access protocole. It follws a protocole or certain rules to get data.Its complex
+SOAP:Simple object access protocole. It follws a protocole or certain rules to get data. It is complex.
 REST:Representational state transfer. It follows an architectural style. Easier.
 SOAP protocole can be used in rest but not vice versa.
 
 
 • Describe the common HTTP methods used in RESTful APIs.
 
-Get: retrieve/read data from server
-Post: send data to the server to add another entry
-Put: update an existing data in the server
-patch: update only part of an existing data on the server
-Delete: delete the data from server
-Head: Read data, but only return header not the body of the response
-Options: Read info about the available communication options of the resource
+Get: retrieve/read data from server</br>
+Post: send data to the server to add another entry</br>
+Put: update an existing data in the server</br>
+patch: update only part of an existing data on the server</br>
+Delete: delete the data from server</br>
+Head: Read data, but only return header not the body of the response</br>
+Options: Read info about the available communication options of the resource</br>
 
 ### ***React Basics***
 • What is JSX in React?
@@ -266,7 +310,7 @@ JSX is a syntax to write html like syntax in js. It is transpiled or converted b
 
 • Explain the purpose of state in React components.
 
-State in react is a local variable to maintane the state in component. useState() hook is for creating state variable. It re-render the component whenever the state gets updated. If we use normal local variable instead of state this component re-rendering will not happen when its get updated.
+State in react is a local variable to maintane the state in component. useState() hook is for creating state variable. It re-render the component whenever the state gets updated. If we use normal local variable instead of state this component re-rendering will not happen when it is getting updated.
 
 ### ***React Components***
 • Differentiate between functional and class components in React.
@@ -343,11 +387,11 @@ React has two stages for each phase:render phase, commit phase.
     * getDerivedStateFromProps(): It is called after constructor() but before render(). It is used for updating the state based on changes in props. It should return an object to update the state or null.
     * shouldComponentUpdate(nextProps, nextState): It is not called on initial render. It is for performance optimization. This method will make sure components behaviour will not get affected by current change in state or props. It returns true by default. It is called before render().
     * render(): It is for creating virtual DOM of the component with current state and props.  It is being called each time when component's state or props changes. It returns JSX.
-    * componentDidUpdate(prevProps, prevState):It is called after updatE BUT not after initial render. This also can be used for making API calls based on newly updated props.
+    * componentDidUpdate(prevProps, prevState):It is called after update but not after initial render. This also can be used for making API calls based on newly updated props.
 - Unmounting: 
   - This method is being called when DOM needs to be removed
   - It has 1 method:componentWillUnmount()
-    * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing aany subscription, network calls or canceling any timers
+    * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing any subscription, network calls or canceling any timers
 
 ### ***React Hooks***
 • Explain the use of the useState hook in React.
@@ -369,26 +413,26 @@ Redux is for managing the state. There will be a store where the state is mainta
 
 Store is the place where all the data of the application is stored. It is a global store so components who have subscription to the store can access it. An action will tell the reducer what type of action to be done and the information or the data. The reducer will be the one doing that type of action and returning a new instance of the state.
 
-Web Performance Optimization:
+### ***Web Performance Optimization:***
 • How can you optimize website performance?
 • Explain lazy loading and its benefits.
 
-Cross-Origin Resource Sharing (CORS):
+### ***Cross-Origin Resource Sharing (CORS):***
 • What is CORS, and how does it work?
 • Describe how to handle CORS issues in a web application.
 
-Web Security:
+### ***Web Security:***
 • What is Cross-Site Scripting (XSS), and how can it be prevented?
 • Explain Cross-Site Request Forgery (CSRF) and its prevention methods.
 
-Version Control (Git):
+### ***Version Control (Git):***
 • Describe the purpose of Git and how it differs from other version control systems.
 • Explain the Git branching strategy and the use of merge vs. rebase.
 
-Build Tools (e.g., Webpack):
+### ***Build Tools (e.g., Webpack):***
 • What is Webpack, and how does it improve the frontend development workflow?
 • Explain the concept of code splitting in Webpack.
 
-Testing in Frontend Development:
+### ***Testing in Frontend Development:***
 • What are the benefits of unit testing in a frontend application?
 • Describe the differences between unit testing and integration testing.
