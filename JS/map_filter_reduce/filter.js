@@ -32,7 +32,7 @@ let usersList = [
     {fname:'SGH', lname:'K S', age:10},
 ]
 
-//get the firstname of users whose name is < 30
+//get the firstname of users whose age is < 30
 
 let filtered = usersList.filter(item => item.age < 30).map(x => x.fname)
 console.log(filtered)

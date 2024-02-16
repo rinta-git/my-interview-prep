@@ -45,7 +45,7 @@ let students = [
     {fname:'SGH', lname:'K S', age:10},
 ]
 
-//get the firstname of users whose name is < 30
+//get the firstname of users whose age is < 30
 let out = students.reduce(function (acc,curr){
     if(curr.age < 30)
      acc.push(curr.fname)

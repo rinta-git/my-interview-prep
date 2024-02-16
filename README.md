@@ -238,6 +238,23 @@ regularfn {name: 'Rinta', age: 27}
 Uncaught TypeError: arrowfn is not a constructor
 ```
 
+• What is function currying?
+
+A function currying will convert a function with multiple arguments into seperate functions with single argument. So curryied function will take only one param at a time but return another function with one arg. It is constructed by chaining closures by immediately returning inner functions simultaneously.
+
+```
+const add = (a) => {
+  return function (b) {
+    if (b) return add(a + b);
+    return a;
+  };
+};
+console.log(add(1)(2)(4)());
+
+o/p
+---
+7
+```
 
 ### ****DOM Manipulation:****
 • How does event delegation work in the DOM?
