@@ -432,10 +432,27 @@ Store is the place where all the data of the application is stored. It is a glob
 
 ### ***Web Performance Optimization:***
 • How can you optimize website performance?
+
+<b>Resource optimization</b>: By reducing size of resources such as images and js files by compressing them and using appropriate image format like JPEG2000, JPEG XR, and WebP.</br>
+<b>Code splitting</b>: use code splitting to load only necessary resources for a specific page. This will reduce the load time as well the data usage.
+<b>Minimize the number of HTTP requests</b>: It can be done by combining multiple files into one and using browser caching.
+<b>Progressive loading</b>: Use progressive loading techniques such as lazy loading to load only necessary resources for the user.
+
 • Explain lazy loading and its benefits.
+
+Lazy loading will show only the data on demand. So we can progressively show the data. Lets say I have A and B resources and each will tacke 1MB to load. The user request only either of these or lets say user request A rarely or B rarely. If we show both at one time the total loading time will take 2MB. But if we use lazy loading technique to load the resourse based on demand, we can reduce the 1MB loading time for the web app.
 
 ### ***Cross-Origin Resource Sharing (CORS):***
 • What is CORS, and how does it work?
+
+CORS is an HTTP feature to enable web apps running in one domain to access resources in another domain. To avoid cross-site scripting attacks, modern browsers use same origin policy.</br>
+In standard internet communication, your browser sends an HTTP request to the application server, receives data as an HTTP response, and displays it. In browser terminology, the current browser URL is called the current origin and the third-party URL is cross-origin.
+When you make a cross-origin request, this is the request-response process:
+- The browser adds an origin header to the request with information about the current origin's protocol, host, and port
+- The server checks the current origin header and responds with the requested data and an Access-Control-Allow-Origin header
+- The browser sees the access control request headers and shares the returned data with the client application
+Alternatively, if the server doesn’t want to allow cross-origin access, it responds with an error message.</br>
+
 • Describe how to handle CORS issues in a web application.
 
 ### ***Web Security:***
