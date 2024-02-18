@@ -123,7 +123,7 @@ undefined
 
 Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw</br> reference error: variable __ cannot be accessed before its initialisation.</br> It is due to we are trying to access it when they are in temporal deadzone.<i>Temporal dead zone start from variable declaration to initialisation.</i> Both the variable can not be redeclared in the same scope. It will throw</br> 
 reference error: variable __ being already declared.</br> Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.</br>
-const variable must initialised with a value otherwise throw</br> syntax error: missing initializer in const declaration</br>
+const variable must initialised with a value otherwise throw</br> syntax error: missing initializer in const declaration. The value of a const can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.</br>
 Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not any errors.
 
 Eg:
@@ -419,6 +419,26 @@ It is for keeping local variables of a component. It takes initial value for sta
 
 It is for doing life cycle methods in functional component. It accepts two args. One is a callback fn, second optional dependancy array. If dependency array is not there, the callback fn will called on each render. If an empty array passed as second argument then the callback fn will called only once(componentDidMount). If the dependency array has any state variable then the callback fn will get executed each time when the state gets updated(componentDidUpdate). To do compenentWillUnmount in functional component, return from callback fn of useEffect hook.
 
+• How do you update a single property in an object using setState? Consider state,</br>
+```
+const [employee, setEmployee] = useState({
+    name: "Stella",
+    age: 26,
+    position: "engineer",
+  });
+```
+```
+o/p
+---
+const copy = JSON.parse(JSON.stringify(employee))
+copy.age = 30;
+setEmployee(copy)
+
+or
+
+setEmployee({...employee, age:30})
+```
+
 ### ***Redux***
 • What problem does Redux solve in a React application?
 
@@ -455,6 +475,8 @@ Alternatively, if the server doesn’t want to allow cross-origin access, it res
 
 • Describe how to handle CORS issues in a web application.
 
+By setting the Access-Control-Allow-Origin header to “*” to allow any domain to access the resource.
+
 ### ***Web Security:***
 • What is Cross-Site Scripting (XSS), and how can it be prevented?
 • Explain Cross-Site Request Forgery (CSRF) and its prevention methods.
@@ -470,3 +492,4 @@ Alternatively, if the server doesn’t want to allow cross-origin access, it res
 ### ***Testing in Frontend Development:***
 • What are the benefits of unit testing in a frontend application?
 • Describe the differences between unit testing and integration testing.
+• How unit testing is done?
