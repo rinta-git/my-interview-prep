@@ -63,3 +63,6 @@ console.log(4)
 // 4
 // 3
 // 2
+
+false == '0' //true; With the loose equality, it coerces the type of the values to make them of the same type
+false === '0' //false

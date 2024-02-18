@@ -10,6 +10,43 @@ The DOCTYPE declaration is an instruction to the web browser about what version 
 `<div></div>` element is for organising content in a block level structure. It takes full width of the screen or the width of the parent. It always start in a new line.
 `<span></span>` element is for organising content in a inile level. It wrap around a part of the text, links or an image.
 
+• What Is Semantic HTML?
+
+HTML tags that convey the meaning of the content contained within them.For example, tags like <header>, <article>, and <footer> are semantic HTML tags. They clearly indicate the role of the content they contain.
+It is useful for screen readers as it convey the role, also developers can also easily identify each section by its name, also helps in SEO.
+
+• Self closing tag vs closing tag
+
+Closing tags are the tags which contain contents,Eg; <p><div><span>.</br>
+Self-closing tags are the tags which cann't have contents, instead they are pointers to an element installed on the website. Eg;<img/><input/></br>
+
+• What is the Difference between HTML Elements and Tags?
+
+An HTML element consists of a start tag, some content, and an end tag. You can also have attributes in your tags such as class or id name.
+Tag consists of an opening bracket and a closing bracket or it can be a self closing tag as well.
+
+• What is meta tag? its properties
+
+The <meta> tag defines metadata about an HTML document. Used to specify character set, page description, keywords, author of the document, and viewport settings. Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.</br>
+It's properties are: charset, content, http-equiv, name.
+```
+Define keywords for search engines:
+<meta name="keywords" content="HTML, CSS, JavaScript">
+
+Define a description of your web page:
+<meta name="description" content="Free Web tutorials for HTML and CSS">
+
+Define the author of a page:
+<meta name="author" content="John Doe">
+
+Refresh document every 30 seconds:
+<meta http-equiv="refresh" content="30">
+
+Setting the viewport to make your website look good on all devices:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+
 ### ***CSS***
 • What is the box model in CSS?
 
@@ -29,6 +66,13 @@ The box width &  height stops at the border.<br />
 
 Margin is space around the border. It is usefull wen you want to make a space between elements or position an element. Margin allow auto setting and negative values. Also, it can be used for overlapping on another element by setting negative values. It will not impacted by styling of other elements.<br />
 Padding is the space between the border and the content. It is usefull to expand the space of the content with the border. For eg; add space between text and the border of a button. There is no auto settin and negative values in padding. It can be impacted by styling of other elements.
+
+• CSS display:none and visibility:hidden – What's the Difference?
+
+display:none and visibility:hidden are two style declarations you can use to hide elements on the screen with CSS.</br>
+display:none and visibility:hidden are two style declarations you can use to hide elements on the screen with CSS.</br>
+visibility:hidden hides the elements without changing their layouts</br>
+opacity:0 causes the elements to be very transparent but users can still interact with them.</br>
 
 ### ***CSS Flexbox***
 
@@ -99,6 +143,47 @@ The `rem` font size is relative to the base font-size or root font. By default t
 }
 
 ### ***JavaScript Basics***
+• What are the types in JS?
+
+1. String
+2. Number
+3. Bigint - To store integer values that are too big to be represented by a normal JavaScript Number.
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object
+
+• What are the Falsy Values in JavaScript?
+
+false, null, undefined, 0, empty string; ''/``/"". All the values except these are cosidered as truthy.
+A way to check whether a value is falsy or not is to use the Boolean() function.
+```
+console.log(Boolean(false))
+console.log(Boolean(0))
+console.log(Boolean(""))
+console.log(Boolean(null))
+console.log(Boolean(undefined))
+console.log(Boolean(NaN))
+
+o/p
+----
+for everything it will print false.
+```
+The following are some of those values that aren't falsy but may appear as such.
+```
+console.log(Boolean('false')) // An empty object
+console.log(Boolean(' ')) // An empty object
+console.log(Boolean('0')) // An empty object
+console.log(Boolean([])) // An empty array
+console.log(Boolean({})) // An empty object
+
+o/p
+----
+for everything it will print true.
+```
+All non-empty strings in JavaScript are truthy values including strings with only whitespace.
+
 • Explain the concept of hoisting in JavaScript.
 
 Hoisting is a phenomena in which variables and functions can be accessed before its initialisation.
@@ -382,8 +467,54 @@ class Example extends Component {
   }
 }
 ```
+• What is controlled and uncontrolled component
 
+In controlled components form data is handled by a React component. It must have state and we can validate input being changed.
+```
+import React, { useState } from 'react';
+
+function ControlledForm() {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`input's value: ${value}`);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={value} onChange={handleChange} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
+In uncontrolled component form data is handled by the DOM itself and  using state is optional there but must use refs to access current value. Also, uncontrolled component cann't validate input being changed.
+```
+mport React, { useRef } from 'react';
+
+function UncontrolledForm() {
+  const input = useRef();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`input's value: ${input.current.value}`);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" ref={input} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+```
 • Describe the lifecycle methods in a React class component.
+
 There are three phases for component life cycle methods
 - Mounting
 - Updating
@@ -450,6 +581,10 @@ Redux is for managing the state. There will be a store where the state is mainta
 
 Store is the place where all the data of the application is stored. It is a global store so components who have subscription to the store can access it. An action will tell the reducer what type of action to be done and the information or the data. The reducer will be the one doing that type of action and returning a new instance of the state.
 
+• What is middleware in react-redux?
+
+
+
 ### ***Web Performance Optimization:***
 • How can you optimize website performance?
 
@@ -479,17 +614,82 @@ By setting the Access-Control-Allow-Origin header to “*” to allow any domain
 
 ### ***Web Security:***
 • What is Cross-Site Scripting (XSS), and how can it be prevented?
+
+XSS is attacking users browser with malicous code. It is done by, injecting malicious script to vulnarable web page or application. When the user visits this page/application the script gets executed and attack the victims browser.
+It can be prevented by, input validation, use encoding/escaping technique depending on where user input is being used, use appropriate library for html sanitizing, set HttpOnly flag for cookies, so those cookies won't be accessible in client-side js, use content security policy.
+
 • Explain Cross-Site Request Forgery (CSRF) and its prevention methods.
+
+Cross-site request forgery is an attack that forces end user to execute some unwanted actions on the web application in which they are currently active. If the victim is a normal user, this attack can ak for the user to change their email address or transfer funds like that. If the user is an administrative account user it can compromise the entire web page.
 
 ### ***Version Control (Git):***
 • Describe the purpose of Git and how it differs from other version control systems.
+
+Git is an open source distributed version controll system, where software development team can have multiple local copies of their project's code base. This can created, merged and deleted quickly and efficiently. So team can experiment in their project before mmerging into main branch.
+In other version control systems, there is only a single repository. So the developers checkout from that and make changes and move that changes to the common repository. But in git, it is distributed. So developers make copy from central repository and do the changes, meanwhile they can take copy from other developers copied branch to their copy. Then move to the central repository. So it helps to maintane the history of what changes made on what point.Eg;
+Alice can create a copy of the central repository (Charlie) to work on something, while Bob also creates his own copy. Bob may then take any changes from Alice, without ever touching the Charlie's repository. When Alice then finishes her changes and uploads them to Charlie (or more often rather asks Charlie to merge her changes to his repository), Bob may later finish his changes to Alice's code, and send those back for Charlie to merge.
+</br>
 • Explain the Git branching strategy and the use of merge vs. rebase.
+
+There are different git branching startergies namely,
+- Git Flow
+  GitFlow uses the following branches:
+  - develop
+    The GitFlow workflow begins with the develop branch. The main development branch has all the new     features and bug fixes being worked on.
+  - feature. 
+    Developers create feature branches from the develop branch to work on new features or fix bugs. Once a feature is complete, the feature branch is merged back into the develop branch.
+  -release. 
+    When preparing for a new release, developers create a release branch from the develop branch. The release branch is used for new features and bug fixes for the release. Once the release is ready, the devs merge the release branch back into the develop branch and then into the master branch. All the commits in the master branch are tagged with a version number.
+  - hotfix. 
+    This branch serves as a branch for resolving critical bugs found in the production code. After fixing the bug, the developers merge the hotfix branch into the master branch.
+  - master. 
+    This is the main production branch with the latest stable code that is ready for release.
+    ![Alt text](gitflow-workflow-example.png)
+- GitHub Flow
+- GitLab Flow
+- Feature Branching
+- Trunk-based development
+
+Merge vs. Rebase:
+Merging and rebasing are both designed to integrate changes from one branch into another branch in git, but they accomplish this in different ways.
+So let us take an example, there are two commits on the master branch. We created a feature branch, after commit ‘2’ on master. Later, we did some changes in the feature branch in the form of commits A and B. We also did some changes on the master branch, in the form of commit 3.</br>
+In the current scenario, the master branch has the code of Commit 1,2 and 3, but it does not have changes of Commit A and B from the feature branch.</br>
+Similarly, since the feature branch was branched out from master on commit ‘2’, it has code changes from Commit 1,2, A, and B, but it does not have changes from Commit 3 on master.</br>
+If we perform a git merge operation then commits A and B will be merged as commit 4 onto the master branch.
+![Alt text](0_gRLnbCC3dK9BZpxp.webp) </br>
+If we perform a git rebase operation then the commits A and B will be rebased on to the master branch as commit 4 and 5 and there will be no logs of the feature branches.
+![Alt text](0_OvmBuFbAwCjNKr7I.webp)</br>
+we can use Git Rebase, when we are working on branches, which cannot be seen by other developers. And we use Git Merge when the target and source branch can be viewed by other developers or when we want our team to understand logs in a way where they can identify where each commit is coming from.
 
 ### ***Build Tools (e.g., Webpack):***
 • What is Webpack, and how does it improve the frontend development workflow?
+
+A powerful module bundler and task runner, Webpack allows developers to bundle multiple JavaScript files, stylesheets, and images into a single file. This optimizes load times and performance, making it suitable for large-scale applications with complex dependencies.</br>
+
 • Explain the concept of code splitting in Webpack.
+
+It does code splitting by scanning your JavaScript code from an entry point (usually the index.js file) and then following the import statements that are written in that entry point.
+Webpack will repeat the process until it has all the files and modules needed by your web application.
+Once all the files are collected, Webpack will then merge them into one big JavaScript file. This process is also known as the “bundling” process because it commonly generates thebundle.js file that will be served to the browser.
+![Alt text](1_kIHxJN_8YQ37IRl8EluB7g.webp)
 
 ### ***Testing in Frontend Development:***
 • What are the benefits of unit testing in a frontend application?
+  - Can detect bugs early
+  - It encourage developers to write cleaner, modular, and more maintainable code. Writing testable code  often leads to better software design practices, such as separation of concerns and encapsulation.
+  - Unit tests act as a safety net during refactoring or adding new features. They provide confidence that existing functionality remains intact even after changes are made. Without unit tests, modifications to code can introduce unexpected regressions, which are difficult to trace and fix.
+  - They act as a form of documentation, making it easier for others to understand the intended behavior of the code.
+  - They provide the necessary confidence to automate the testing and deployment process, ensuring that changes are thoroughly validated before being released to production.</br>
+
 • Describe the differences between unit testing and integration testing.
+
+Unit Testing: Primarily for verifying the correctness of individual units.
+Integration Testing: Primarily for ensuring that integrated components work together as intended, detecting issues related to their interactions
+
 • How unit testing is done?
+
+  - A test is usually written in a test block.
+  - Inside the test block, the first thing we do is to render the component that we want to test.
+  - Select the elements that we want to interact with
+  - Interact with those elements
+  - Assert that the results are as expected.
