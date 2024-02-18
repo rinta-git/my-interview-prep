@@ -12,13 +12,13 @@ The DOCTYPE declaration is an instruction to the web browser about what version 
 
 • What Is Semantic HTML?
 
-HTML tags that convey the meaning of the content contained within them.For example, tags like <header>, <article>, and <footer> are semantic HTML tags. They clearly indicate the role of the content they contain.
+HTML tags that convey the meaning of the content contained within them.For example, tags like `<header>, <article>, <footer>` are semantic HTML tags. They clearly indicate the role of the content they contain.
 It is useful for screen readers as it convey the role, also developers can also easily identify each section by its name, also helps in SEO.
 
 • Self closing tag vs closing tag
 
-Closing tags are the tags which contain contents,Eg; <p><div><span>.</br>
-Self-closing tags are the tags which cann't have contents, instead they are pointers to an element installed on the website. Eg;<img/><input/></br>
+Closing tags are the tags which contain contents,Eg; `<p><div><span>`.</br>
+Self-closing tags are the tags which cann't have contents, instead they are pointers to an element installed on the website. Eg;`<img/><input/></br>`
 
 • What is the Difference between HTML Elements and Tags?
 
