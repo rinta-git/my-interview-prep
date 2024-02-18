@@ -735,8 +735,8 @@ It is used in between api call and client side. It will help to avoid duplicate 
 • How can you optimize website performance?
 
 <b>Resource optimization</b>: By reducing size of resources such as images and js files by compressing them and using appropriate image format like JPEG2000, JPEG XR, and WebP.</br>
-<b>Code splitting</b>: use code splitting to load only necessary resources for a specific page. This will reduce the load time as well the data usage.
-<b>Minimize the number of HTTP requests</b>: It can be done by combining multiple files into one and using browser caching.
+<b>Code splitting</b>: use code splitting to load only necessary resources for a specific page. This will reduce the load time as well the data usage.</br>
+<b>Minimize the number of HTTP requests</b>: It can be done by combining multiple files into one and using browser caching.</br>
 <b>Progressive loading</b>: Use progressive loading techniques such as lazy loading to load only necessary resources for the user.
 
 • Explain lazy loading and its benefits.
