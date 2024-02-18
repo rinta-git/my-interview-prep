@@ -190,7 +190,7 @@ $border-dark: rgba($base-color, 0.88)
 
 • What are the Falsy Values in JavaScript?
 
-false, null, undefined, 0, empty string; ''/``/"". All the values except these are cosidered as truthy.
+false, null, undefined, 0, empty string; ''/``/"", NaN. All the values except these are cosidered as truthy.
 A way to check whether a value is falsy or not is to use the Boolean() function.
 ```
 console.log(Boolean(false))
@@ -729,7 +729,7 @@ Store is the place where all the data of the application is stored. It is a glob
 
 • What is middleware in react-redux?
 
-
+It is used in between api call and client side. It will help to avoid duplicate calls. When the action dispatches the call to server it will act as an intermediate between the dispatch and the api.
 
 ### ***Web Performance Optimization:***
 • How can you optimize website performance?
