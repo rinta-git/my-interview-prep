@@ -46,6 +46,10 @@ Setting the viewport to make your website look good on all devices:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
+• Difference between document.createElement vs document.createFragment
+
+The child nodes of the document fragment are inserted into the DOM where you put the fragment, but the fragment itself is not inserted. It is useful for grouping but don't want parent in DOM. </br>
+On the other hand, when you create an element and append it to the DOM, both the element and its children are appended.
 
 ### ***CSS***
 • What is the box model in CSS?
@@ -141,6 +145,36 @@ The `rem` font size is relative to the base font-size or root font. By default t
 .child-rem {
   font-size: 1rem; /* equal to 16px, relative to base font size */
 }
+
+• Variable declaretion in SASS, SCSS, CSS?
+```
+<variable>: <expression>
+
+=== SCSS SYNTAX === 
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+
+.alert {
+  border: 1px solid $border-dark;
+}
+
+=== SASS SYNTAX === 
+$base-color: #c6538c
+$border-dark: rgba($base-color, 0.88)
+
+.alert
+  border: 1px solid $border-dark
+
+=== CSS SYNTAX === var()
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+}
+```
 
 ### ***JavaScript Basics***
 • What are the types in JS?
@@ -239,6 +273,30 @@ undefined
 syntx error:missing initialiser in const declaration
 10
 ```
+• How js achieve asynchrous behaviour
+
+In JavaScript, there are three common ways to work with asynchronous operations: promises, async/await,callbacks.</br>
+callback: It is a function that executes after the outer code call has finished running. It is supplied as an input to another function.</br>
+Promise: An object representing eventual completion or failure of an asynchronous operation.</br>
+async/await: It is a JavaScript technology that allows you to create asynchronous code more synchronously. Chaining promises together can become quite clumsy and confusing. For this reason, async and await were developed. It handles promises.
+
+• What is `this` keyword in js?
+
+In JavaScript, the this keyword refers to an object. The object depends on how this is being invoked (used or called). this === context</br>
+In an object method, this refers to the object.</br>
+Alone, this refers to the global object.</br>
+In a function, this refers to the global object.</br>
+In an event, this refers to the element that received the event.</br>
+
+• What is lexical scope & scope chain?
+
+Scope refers to the area where an item (such as a function or variable) is visible and accessible to other code.</br>
+JavaScript's scope chain determines the hierarchy of places the JS must go through to find the origin of the specific variable that got called.
+
+• map vs forEach
+
+Both are for iterating over an array. Map returns an array where forEach returns nothing. The returned value of foreach will be undefined.
+
 ### ****JavaScript Functions:**** 
 
 • What is a closure in JavaScript?
@@ -414,6 +472,55 @@ JSX is a syntax to write html like syntax in js. It is transpiled or converted b
 
 State in react is a local variable to maintane the state in component. useState() hook is for creating state variable. It re-render the component whenever the state gets updated. If we use normal local variable instead of state this component re-rendering will not happen when it is getting updated.
 
+• What is context api?
+
+context api is used to avaoid prop drilling. When we want to pass a prop down to the deeply nested component, it is very difficult and unneccessory to pass that in every other coponent which is not using that. This can be avoided using context api. 
+Context API consists of two main components: the context provider and the context consumer. The provider is responsible for creating and managing the context, which holds the data to be shared between components. On the other hand, the consumer is used to access the context and its data from within a component.
+```
+MyContext.js 
+import { createContext } from 'react';
+export const MyContext = createContext("");
+
+parent.js
+import { useState, React } from "react";
+import { MyContext } from "./MyContext";
+import MyComponent from "./MyComponent";
+
+function App() {
+  const [text, setText] = useState("");
+
+  return (
+    <div>
+      <MyContext.Provider value={{ text, setText }}>
+        <MyComponent />
+      </MyContext.Provider>
+    </div>
+  );
+}
+
+export default App;
+
+consumer.js
+import { useContext } from 'react';
+import { MyContext } from './MyContext';
+
+function MyComponent() {
+  const { text, setText } = useContext(MyContext);
+
+  return (
+    <div>
+      <h1>{text}</h1>
+      <button onClick={() => setText('Hello, world!')}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default MyComponent;
+
+```
+
 ### ***React Components***
 • Differentiate between functional and class components in React.
 
@@ -541,6 +648,11 @@ React has two stages for each phase:render phase, commit phase.
   - It has 1 method:componentWillUnmount()
     * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing any subscription, network calls or canceling any timers
 
+• PureComponent vs Regular Component in React
+
+Regular Component: Re-renders whenever its parent component re-renders or when its state or props change, even if the changes don't affect the component's output.</br>
+PureComponent: Implements a shallow comparison in shouldComponentUpdate and only re-renders when there are changes in its state or props.
+
 ### ***React Hooks***
 • Explain the use of the useState hook in React.
 
@@ -568,6 +680,40 @@ setEmployee(copy)
 or
 
 setEmployee({...employee, age:30})
+```
+• What is useReducer()?
+
+It is similar to useState() but it is usefull for more complex logic. This hook accepts 3 args, reducer, initial value, optional initilizer function
+reducer: It tells how action to be done to update state. It accepts state and action as its param.
+initialarg: It is the initial value for state.
+initializer function: It is for initializing with initial state.
+
+```
+import { useReducer } from 'react';
+
+function reducer(state, action) {
+  if (action.type === 'incremented_age') {
+    return {
+      age: state.age + 1
+    };
+  }
+  throw Error('Unknown action.');
+}
+
+export default function Counter() {
+  const [state, dispatch] = useReducer(reducer, { age: 42 });
+
+  return (
+    <>
+      <button onClick={() => {
+        dispatch({ type: 'incremented_age' })
+      }}>
+        Increment age
+      </button>
+      <p>Hello! You are {state.age}.</p>
+    </>
+  );
+}
 ```
 
 ### ***Redux***
