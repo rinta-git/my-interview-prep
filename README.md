@@ -297,6 +297,10 @@ JavaScript's scope chain determines the hierarchy of places the JS must go throu
 
 Both are for iterating over an array. Map returns an array where forEach returns nothing. The returned value of foreach will be undefined.
 
+• shallow copy vs deep copy
+
+• callback hell
+
 ### ****JavaScript Functions:**** 
 
 • What is a closure in JavaScript?
@@ -380,6 +384,8 @@ o/p
 regularfn {name: 'Rinta', age: 27}
 Uncaught TypeError: arrowfn is not a constructor
 ```
+• adv of arrow function?
+
 
 • What is function currying?
 
@@ -520,6 +526,8 @@ function MyComponent() {
 export default MyComponent;
 
 ```
+• React vs JS
+
 
 ### ***React Components***
 • Differentiate between functional and class components in React.
@@ -653,6 +661,11 @@ React has two stages for each phase:render phase, commit phase.
 Regular Component: Re-renders whenever its parent component re-renders or when its state or props change, even if the changes don't affect the component's output.</br>
 PureComponent: Implements a shallow comparison in shouldComponentUpdate and only re-renders when there are changes in its state or props.
 
+• Is react unidiretional or bidirectional? How to pass data between siblings? How to pass data from child to parent?
+
+React unidiretional; parent --> child.</br>
+A prop can also be used to send a function. If we use this feature to send a call back function to the child, we will then be able to use inverse data flow to get information back to the parent.
+
 ### ***React Hooks***
 • Explain the use of the useState hook in React.
 
@@ -715,6 +728,8 @@ export default function Counter() {
   );
 }
 ```
+• useCallback() and useMemo() hook ?
+
 
 ### ***Redux***
 • What problem does Redux solve in a React application?
