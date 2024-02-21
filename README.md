@@ -1,6 +1,7 @@
 # my-interview-prep
 
-### ***HTML***
+### **_HTML_**
+
 • What is the purpose of the doctype declaration?
 
 The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
@@ -29,6 +30,7 @@ Tag consists of an opening bracket and a closing bracket or it can be a self clo
 
 The <meta> tag defines metadata about an HTML document. Used to specify character set, page description, keywords, author of the document, and viewport settings. Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.</br>
 It's properties are: charset, content, http-equiv, name.
+
 ```
 Define keywords for search engines:
 <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -46,12 +48,14 @@ Setting the viewport to make your website look good on all devices:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
+
 • Difference between document.createElement vs document.createFragment
 
 The child nodes of the document fragment are inserted into the DOM where you put the fragment, but the fragment itself is not inserted. It is useful for grouping but don't want parent in DOM. </br>
 On the other hand, when you create an element and append it to the DOM, both the element and its children are appended.
 
-### ***CSS***
+### **_CSS_**
+
 • What is the box model in CSS?
 
 For very element, a box is wrapped around them. It has four parts; content, padding, border, margin.
@@ -61,8 +65,8 @@ Border: A border is surrounded to the padding & content.<br />
 Margin: A space aruond the border. It is transparent.<br />
 If we set a width & height to the element. The actual width and height of the element is calculated by adding the space taken for padding and border.<br />
 So, totalWidth = width + leftPadding + rightPadding + leftBorder + rightBorder.<br />
-totalHeight =  height + topPadding + bottomPadding + topBorder + bottomBorder.<br />
-The box width &  height stops at the border.<br />
+totalHeight = height + topPadding + bottomPadding + topBorder + bottomBorder.<br />
+The box width & height stops at the border.<br />
 
 ![Alt text](image.png)
 
@@ -86,7 +90,23 @@ The CSS Object Model is a set of APIs allowing the manipulation of CSS from Java
 
 The rendering process of the CSS Object Model and the DOM is done within the browser and is called the critical rendering path. It is the process or series of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels that display on the screen.
 
-### ***CSS Flexbox***
+• What is CSS preprocessor?
+
+A CSS preprocessor is a program that lets you generate CSS from the preprocessor's own unique syntax.
+
+• What is SASS/SCSS preprocessor?
+
+SASS/SCSS is a CSS preprocessor that runs on the server and compiles to CSS code that your browser understands.
+
+• Why to use SASS instead of CSS ?
+
+Sass is much rich in features than CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+• Why to use SCSS instead of CSS ?
+
+SCSS uses fewer lines of code than CSS, which makes the code load faster. Standard CSS doesn't support nesting. There is no way to write a class inside another one. SCSS supports nested syntax.
+
+### **_CSS Flexbox_**
 
 • What is the flexbox model, and how does it work?
 ![Alt text](image-6.png)
@@ -109,7 +129,6 @@ To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/s
 
 ![Alt text](image-5.png)
 
-
 • Explain the purpose of justify-content and align-items in flexbox.<br />
 
 To align items in the main axis, can use jstify-content:flex-start/flex-end/centre/space-between/space-around.
@@ -122,7 +141,7 @@ To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/s
 
 ![Alt text](image-5.png)
 
-### ***CSS Grid***
+### **_CSS Grid_**
 
 • How does CSS Grid differ from Flexbox?
 
@@ -133,32 +152,34 @@ Grid is 2D. It can control both row and column arrangement simultaneusly. It is 
 To set the width of each column in grid. It can be set using grid-template-column:w1 w2 w3 or grid-template-column:repeat(no.Column, width).
 https://www.freecodecamp.org/news/css-grid-tutorial-with-cheatsheet/#the-justify-items-property
 
-### ***Responsive Design***
+### **_Responsive Design_**
+
 • What is the importance of media queries in responsive design?
 
-Using media queries, a website can be optimised by changing the layout & content for various screen size. Also, it can improve the performance by loading only neccessary features and styles. It makes the website more faster. Responsiveness helps to avoid horizontal scrolling, distorted images.  It makes the application more user friendly and flexible to different screen size.
+Using media queries, a website can be optimised by changing the layout & content for various screen size. Also, it can improve the performance by loading only neccessary features and styles. It makes the website more faster. Responsiveness helps to avoid horizontal scrolling, distorted images. It makes the application more user friendly and flexible to different screen size.
 
 • Describe the difference between em and rem units in CSS.
 
 Both are units of measurement of font size. `em` font size is relative to its parent's font size. Eg; If the parent font size is 16px then 1em of the child is equal to 16px. 0.5em of the child is equal to 8px(half of the parent's font size)
 The `rem` font size is relative to the base font-size or root font. By default the root font or document font size is 16px, so in this case if any text with 1rem is equal to 16px.<br />
 .parent {
-  font-size: 16px;
+font-size: 16px;
 }
 
 .child-em {
-  font-size: 1em; /* equal to 16px, relative to parent font size */
+font-size: 1em; /_ equal to 16px, relative to parent font size _/
 }
 
 .child-rem {
-  font-size: 1rem; /* equal to 16px, relative to base font size */
+font-size: 1rem; /_ equal to 16px, relative to base font size _/
 }
 
 • Variable declaretion in SASS, SCSS, CSS?
+
 ```
 <variable>: <expression>
 
-=== SCSS SYNTAX === 
+=== SCSS SYNTAX ===
 $base-color: #c6538c;
 $border-dark: rgba($base-color, 0.88);
 
@@ -166,7 +187,7 @@ $border-dark: rgba($base-color, 0.88);
   border: 1px solid $border-dark;
 }
 
-=== SASS SYNTAX === 
+=== SASS SYNTAX ===
 $base-color: #c6538c
 $border-dark: rgba($base-color, 0.88)
 
@@ -184,7 +205,8 @@ $border-dark: rgba($base-color, 0.88)
 }
 ```
 
-### ***JavaScript Basics***
+### **_JavaScript Basics_**
+
 • What are the types in JS?
 
 1. String
@@ -200,6 +222,7 @@ $border-dark: rgba($base-color, 0.88)
 
 false, null, undefined, 0, empty string; ''/``/"", NaN. All the values except these are cosidered as truthy.
 A way to check whether a value is falsy or not is to use the Boolean() function.
+
 ```
 console.log(Boolean(false))
 console.log(Boolean(0))
@@ -212,7 +235,9 @@ o/p
 ----
 for everything it will print false.
 ```
+
 The following are some of those values that aren't falsy but may appear as such.
+
 ```
 console.log(Boolean('false')) // An empty object
 console.log(Boolean(' ')) // An empty object
@@ -224,6 +249,7 @@ o/p
 ----
 for everything it will print true.
 ```
+
 All non-empty strings in JavaScript are truthy values including strings with only whitespace.
 
 • Explain the concept of hoisting in JavaScript.
@@ -233,6 +259,7 @@ Hoisting is a phenomena in which variables and functions can be accessed before 
 [![Alt text](image-7.png)](https://www.youtube.com/watch?v=Fnlnw8uY6jo)
 
 Eg:
+
 ```
 getName();
 console.log(x)
@@ -246,14 +273,16 @@ o/p
 Anu Thomas
 undefined
 ```
+
 • What is the difference between let, const, and var?
 
-Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw</br> reference error: variable __ cannot be accessed before its initialisation.</br> It is due to we are trying to access it when they are in temporal deadzone.<i>Temporal dead zone start from variable declaration to initialisation.</i> Both the variable can not be redeclared in the same scope. It will throw</br> 
-reference error: variable __ being already declared.</br> Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.</br>
+Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw</br> reference error: variable ** cannot be accessed before its initialisation.</br> It is due to we are trying to access it when they are in temporal deadzone.<i>Temporal dead zone start from variable declaration to initialisation.</i> Both the variable can not be redeclared in the same scope. It will throw</br>
+reference error: variable ** being already declared.</br> Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.</br>
 const variable must initialised with a value otherwise throw</br> syntax error: missing initializer in const declaration. The value of a const can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.</br>
 Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not any errors.
 
 Eg:
+
 ```
 var x;
 console.log(x);
@@ -281,6 +310,7 @@ undefined
 syntx error:missing initialiser in const declaration
 10
 ```
+
 • How js achieve asynchrous behaviour
 
 In JavaScript, there are three common ways to work with asynchronous operations: promises, async/await,callbacks.</br>
@@ -309,7 +339,7 @@ Both are for iterating over an array. Map returns an array where forEach returns
 
 • callback hell
 
-### ****JavaScript Functions:**** 
+### \***\*JavaScript Functions:\*\***
 
 • What is a closure in JavaScript?
 
@@ -318,6 +348,7 @@ A function along with its lexical scope or a function binds together with its le
 [![Alt text](image-8.png)](https://www.youtube.com/watch?v=qikxEIxsXco)
 
 Eg:
+
 ```
 function parent(){
   let a = 123;
@@ -335,7 +366,9 @@ o/p:
 123 //here, child fn is in closure. Out is able to print 123 since child is stored along with its parent()
 lexical enviornment
 ```
+
 Eg2:
+
 ```
 function sample(){
   let a = 'hello'
@@ -354,6 +387,7 @@ In case of regular function, we can call the function before its defenition. Its
 In case of arrow function, it should be called after function defenition to work. If it is called it will
 return undefined as result because js is treating this function as a variable. So while calling the function before the declaration, memory space is allocated but value or defenition is not available. So the value is initialised with undefined during memory allocation time.</br>
 In regular function it has its on this context. But for arrow function, it has this value from its surrounding or lexical context in which arrow function is created.
+
 ```
 Eg:
 const myObj = {
@@ -367,11 +401,13 @@ const myObj = {
 myObj.regular();
 myObj.arrow();
 ```
-o/p
-----
+
+## o/p
+
 ![Alt text](Screenshot-2024-01-12-at-5.46.04-PM.png)</br>
 
 In regular function constructor can be created and use value of this. But it is not possible in arrow function as its this value is defined based on its lexical enviornment.
+
 ```
 function regularfn(name,age){
     this.name = name;
@@ -392,8 +428,8 @@ o/p
 regularfn {name: 'Rinta', age: 27}
 Uncaught TypeError: arrowfn is not a constructor
 ```
-• adv of arrow function?
 
+• adv of arrow function?
 
 • What is function currying?
 
@@ -413,7 +449,8 @@ o/p
 7
 ```
 
-### ****DOM Manipulation:****
+### \***\*DOM Manipulation:\*\***
+
 • How does event delegation work in the DOM?
 
 Event delegation happens in bubbling up phase. So in this, an event listener is attached to the parent element. If the event occure in child it is bubbled up to the parent, grand parent and so on till it reaches the root document.
@@ -423,8 +460,9 @@ Adv. of event delegation is that 1)performance improvement:only a single event l
 
 • Explain the purpose of the data- attributes.
 
-It is for storing custom data in semantic html elements. It follows a syntax data-*. The data can be accessed inside js using dataset property. Also, can be used in css.
+It is for storing custom data in semantic html elements. It follows a syntax data-\*. The data can be accessed inside js using dataset property. Also, can be used in css.
 Eg;
+
 ```
 <article
 id="content"
@@ -444,7 +482,9 @@ data-index-number=3
   }
 </style>
 ```
-### ***AJAX***
+
+### **_AJAX_**
+
 • What is AJAX, and how does it work?
 
 AJAX, asynchronous javascript xml: It allow a website update its content without reloading the entire page.</br>
@@ -459,13 +499,13 @@ browser create a js call -> this call create a XMLHttpRequest object -> sends a 
 Eg; Google search engine; suggest keyword while typing the search keywords without reloading the page
 Eg2; Chat option on website to the customer service. We cancontinue chating while exploring the site without reloading the page
 
-### ***RESTful API Concepts***
+### **_RESTful API Concepts_**
+
 • What is REST, and how does it differ from SOAP?
 
 SOAP:Simple object access protocole. It follws a protocole or certain rules to get data. It is complex.
 REST:Representational state transfer. It follows an architectural style. Easier.
 SOAP protocole can be used in rest but not vice versa.
-
 
 • Describe the common HTTP methods used in RESTful APIs.
 
@@ -477,7 +517,8 @@ Delete: delete the data from server</br>
 Head: Read data, but only return header not the body of the response</br>
 Options: Read info about the available communication options of the resource</br>
 
-### ***React Basics***
+### **_React Basics_**
+
 • What is JSX in React?
 
 JSX is a syntax to write html like syntax in js. It is transpiled or converted before it reaches the JSE. It is done by babel pkg.
@@ -488,10 +529,11 @@ State in react is a local variable to maintane the state in component. useState(
 
 • What is context api?
 
-context api is used to avaoid prop drilling. When we want to pass a prop down to the deeply nested component, it is very difficult and unneccessory to pass that in every other coponent which is not using that. This can be avoided using context api. 
+context api is used to avaoid prop drilling. When we want to pass a prop down to the deeply nested component, it is very difficult and unneccessory to pass that in every other coponent which is not using that. This can be avoided using context api.
 Context API consists of two main components: the context provider and the context consumer. The provider is responsible for creating and managing the context, which holds the data to be shared between components. On the other hand, the consumer is used to access the context and its data from within a component.
+
 ```
-MyContext.js 
+MyContext.js
 import { createContext } from 'react';
 export const MyContext = createContext("");
 
@@ -534,13 +576,15 @@ function MyComponent() {
 export default MyComponent;
 
 ```
+
 • React vs JS
 
+### **_React Components_**
 
-### ***React Components***
 • Differentiate between functional and class components in React.
 
 Functional components are javascript functions. It is also called stateless component as it doesn't have their state and lifecycle methods. It is more efficient and easy to code. It uses react's useState() hook to maintane the state and useEffect() hook to handle life cycle methods. It accepts props as input and return jsx as output.
+
 ```
 import React, { useState } from 'react';
 
@@ -561,7 +605,9 @@ function Example() {
   );
 }
 ```
+
 Class components are complex. It is also called as statefull component as it has their own state and lifecycle methods. It has `this` and constructor() to use state. It extends React.component class and has a render() method. The render() method returns jsx. It is less effiecient and more complex to write.
+
 ```
 import React, { Component } from 'react';
 
@@ -590,9 +636,11 @@ class Example extends Component {
   }
 }
 ```
+
 • What is controlled and uncontrolled component
 
 In controlled components form data is handled by a React component. It must have state and we can validate input being changed.
+
 ```
 import React, { useState } from 'react';
 
@@ -616,7 +664,9 @@ function ControlledForm() {
   );
 }
 ```
-In uncontrolled component form data is handled by the DOM itself and  using state is optional there but must use refs to access current value. Also, uncontrolled component cann't validate input being changed.
+
+In uncontrolled component form data is handled by the DOM itself and using state is optional there but must use refs to access current value. Also, uncontrolled component cann't validate input being changed.
+
 ```
 mport React, { useRef } from 'react';
 
@@ -636,33 +686,36 @@ function UncontrolledForm() {
   );
 }
 ```
+
 • Describe the lifecycle methods in a React class component.
 
 There are three phases for component life cycle methods
+
 - Mounting
 - Updating
 - Unmounting
-![Alt text](image-10.png)
+  ![Alt text](image-10.png)
 
 React has two stages for each phase:render phase, commit phase.
+
 - Mounting:
   - It occure when component is first created and inserted to the DOM
   - It has 4 methods:constructor(), getDerivedStateFromProps(), render(), componentDidMount()
-      * Constructor(): It is for initializing the state and bind its methods to component's instance. Inside    constructor super(props) must be done, otherwise the props will be undefined.
-      * getDerivedStateFromProps(): It is being called after constructor() before render(). It is for updating the current state based on the changes in props. It should retrun an object to update the state or null.
-      * render(): It is for generating the virtual DOM of the component with the current state and props. It is   being called each time the state or props changed, or the parents component got re-rendered. It retrun JSX.    
-      * componentDidMount():It will occure after mounting stage. So that it can fill the data and re-render the component. It is used for making API calls.
+    - Constructor(): It is for initializing the state and bind its methods to component's instance. Inside constructor super(props) must be done, otherwise the props will be undefined.
+    - getDerivedStateFromProps(): It is being called after constructor() before render(). It is for updating the current state based on the changes in props. It should retrun an object to update the state or null.
+    - render(): It is for generating the virtual DOM of the component with the current state and props. It is being called each time the state or props changed, or the parents component got re-rendered. It retrun JSX.
+    - componentDidMount():It will occure after mounting stage. So that it can fill the data and re-render the component. It is used for making API calls.
 - Updating:
- - It is being done when component is re-rendered.
- - It has 4 methods: getDerivedStateFromProps(), shouldComponentUpdate(),  render(), componentDidUpdate(prevProps, prevState)
-    * getDerivedStateFromProps(): It is called after constructor() but before render(). It is used for updating the state based on changes in props. It should return an object to update the state or null.
-    * shouldComponentUpdate(nextProps, nextState): It is not called on initial render. It is for performance optimization. This method will make sure components behaviour will not get affected by current change in state or props. It returns true by default. It is called before render().
-    * render(): It is for creating virtual DOM of the component with current state and props.  It is being called each time when component's state or props changes. It returns JSX.
-    * componentDidUpdate(prevProps, prevState):It is called after update but not after initial render. This also can be used for making API calls based on newly updated props.
-- Unmounting: 
+- It is being done when component is re-rendered.
+- It has 4 methods: getDerivedStateFromProps(), shouldComponentUpdate(), render(), componentDidUpdate(prevProps, prevState)
+  - getDerivedStateFromProps(): It is called after constructor() but before render(). It is used for updating the state based on changes in props. It should return an object to update the state or null.
+  - shouldComponentUpdate(nextProps, nextState): It is not called on initial render. It is for performance optimization. This method will make sure components behaviour will not get affected by current change in state or props. It returns true by default. It is called before render().
+  - render(): It is for creating virtual DOM of the component with current state and props. It is being called each time when component's state or props changes. It returns JSX.
+  - componentDidUpdate(prevProps, prevState):It is called after update but not after initial render. This also can be used for making API calls based on newly updated props.
+- Unmounting:
   - This method is being called when DOM needs to be removed
   - It has 1 method:componentWillUnmount()
-    * componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing any subscription, network calls or canceling any timers
+    - componentWillUnmount(): called just before the component is removed and being destroyed. It is usefull for cleaning like removing any subscription, network calls or canceling any timers
 
 • PureComponent vs Regular Component in React
 
@@ -674,7 +727,8 @@ PureComponent: Implements a shallow comparison in shouldComponentUpdate and only
 React unidiretional; parent --> child.</br>
 A prop can also be used to send a function. If we use this feature to send a call back function to the child, we will then be able to use inverse data flow to get information back to the parent.
 
-### ***React Hooks***
+### **_React Hooks_**
+
 • Explain the use of the useState hook in React.
 
 It is for keeping local variables of a component. It takes initial value for state and return the current state and state setter function to update the state. It works with array, obj, strings etc.
@@ -684,6 +738,7 @@ It is for keeping local variables of a component. It takes initial value for sta
 It is for doing life cycle methods in functional component. It accepts two args. One is a callback fn, second optional dependancy array. If dependency array is not there, the callback fn will called on each render. If an empty array passed as second argument then the callback fn will called only once(componentDidMount). If the dependency array has any state variable then the callback fn will get executed each time when the state gets updated(componentDidUpdate). To do compenentWillUnmount in functional component, return from callback fn of useEffect hook.
 
 • How do you update a single property in an object using setState? Consider state,</br>
+
 ```
 const [employee, setEmployee] = useState({
     name: "Stella",
@@ -691,6 +746,7 @@ const [employee, setEmployee] = useState({
     position: "engineer",
   });
 ```
+
 ```
 o/p
 ---
@@ -702,6 +758,7 @@ or
 
 setEmployee({...employee, age:30})
 ```
+
 • What is useReducer()?
 
 It is similar to useState() but it is usefull for more complex logic. This hook accepts 3 args, reducer, initial value, optional initilizer function
@@ -736,13 +793,14 @@ export default function Counter() {
   );
 }
 ```
+
 • useCallback() and useMemo() hook ?
 
+### **_Redux_**
 
-### ***Redux***
 • What problem does Redux solve in a React application?
 
-Redux is for managing the state. There will be a store where the state is maintained and all the components who subscribed to the store has access to it. It is more convinient and improve the performance. When it comes to larger application, managing the state and updating the state by passing through all the component tree is very difficult and confusing. Redux solves this problem. When the state gets updated by default all the component who are subscribed to the store get notified. Using redux developer tools can see the history of the state and current value. It is easy to debug also. 
+Redux is for managing the state. There will be a store where the state is maintained and all the components who subscribed to the store has access to it. It is more convinient and improve the performance. When it comes to larger application, managing the state and updating the state by passing through all the component tree is very difficult and confusing. Redux solves this problem. When the state gets updated by default all the component who are subscribed to the store get notified. Using redux developer tools can see the history of the state and current value. It is easy to debug also.
 
 • Explain the roles of actions, reducers, and the store in Redux.
 
@@ -754,7 +812,8 @@ Store is the place where all the data of the application is stored. It is a glob
 
 It is used in between api call and client side. It will help to avoid duplicate calls. When the action dispatches the call to server it will act as an intermediate between the dispatch and the api.
 
-### ***Web Performance Optimization:***
+### **_Web Performance Optimization:_**
+
 • How can you optimize website performance?
 
 <b>Resource optimization</b>: By reducing size of resources such as images and js files by compressing them and using appropriate image format like JPEG2000, JPEG XR, and WebP.</br>
@@ -766,22 +825,25 @@ It is used in between api call and client side. It will help to avoid duplicate 
 
 Lazy loading will show only the data on demand. So we can progressively show the data. Lets say I have A and B resources and each will tacke 1MB to load. The user request only either of these or lets say user request A rarely or B rarely. If we show both at one time the total loading time will take 2MB. But if we use lazy loading technique to load the resourse based on demand, we can reduce the 1MB loading time for the web app.
 
-### ***Cross-Origin Resource Sharing (CORS):***
+### **_Cross-Origin Resource Sharing (CORS):_**
+
 • What is CORS, and how does it work?
 
 CORS is an HTTP feature to enable web apps running in one domain to access resources in another domain. To avoid cross-site scripting attacks, modern browsers use same origin policy.</br>
 In standard internet communication, your browser sends an HTTP request to the application server, receives data as an HTTP response, and displays it. In browser terminology, the current browser URL is called the current origin and the third-party URL is cross-origin.
 When you make a cross-origin request, this is the request-response process:
+
 - The browser adds an origin header to the request with information about the current origin's protocol, host, and port
 - The server checks the current origin header and responds with the requested data and an Access-Control-Allow-Origin header
 - The browser sees the access control request headers and shares the returned data with the client application
-Alternatively, if the server doesn’t want to allow cross-origin access, it responds with an error message.</br>
+  Alternatively, if the server doesn’t want to allow cross-origin access, it responds with an error message.</br>
 
 • Describe how to handle CORS issues in a web application.
 
-By setting the Access-Control-Allow-Origin header to “*” to allow any domain to access the resource.
+By setting the Access-Control-Allow-Origin header to “\*” to allow any domain to access the resource.
 
-### ***Web Security:***
+### **_Web Security:_**
+
 • What is Cross-Site Scripting (XSS), and how can it be prevented?
 
 XSS is attacking users browser with malicous code. It is done by, injecting malicious script to vulnarable web page or application. When the user visits this page/application the script gets executed and attack the victims browser.
@@ -791,7 +853,8 @@ It can be prevented by, input validation, use encoding/escaping technique depend
 
 Cross-site request forgery is an attack that forces end user to execute some unwanted actions on the web application in which they are currently active. If the victim is a normal user, this attack can ak for the user to change their email address or transfer funds like that. If the user is an administrative account user it can compromise the entire web page.
 
-### ***Version Control (Git):***
+### **_Version Control (Git):_**
+
 • Describe the purpose of Git and how it differs from other version control systems.
 
 Git is an open source distributed version controll system, where software development team can have multiple local copies of their project's code base. This can created, merged and deleted quickly and efficiently. So team can experiment in their project before mmerging into main branch.
@@ -801,17 +864,18 @@ Alice can create a copy of the central repository (Charlie) to work on something
 • Explain the Git branching strategy and the use of merge vs. rebase.
 
 There are different git branching startergies namely,
+
 - Git Flow
   GitFlow uses the following branches:
   - develop
-    The GitFlow workflow begins with the develop branch. The main development branch has all the new     features and bug fixes being worked on.
-  - feature. 
+    The GitFlow workflow begins with the develop branch. The main development branch has all the new features and bug fixes being worked on.
+  - feature.
     Developers create feature branches from the develop branch to work on new features or fix bugs. Once a feature is complete, the feature branch is merged back into the develop branch.
-  -release. 
+    -release.
     When preparing for a new release, developers create a release branch from the develop branch. The release branch is used for new features and bug fixes for the release. Once the release is ready, the devs merge the release branch back into the develop branch and then into the master branch. All the commits in the master branch are tagged with a version number.
-  - hotfix. 
+  - hotfix.
     This branch serves as a branch for resolving critical bugs found in the production code. After fixing the bug, the developers merge the hotfix branch into the master branch.
-  - master. 
+  - master.
     This is the main production branch with the latest stable code that is ready for release.
     ![Alt text](gitflow-workflow-example.png)
 - GitHub Flow
@@ -830,7 +894,8 @@ If we perform a git rebase operation then the commits A and B will be rebased on
 ![Alt text](0_OvmBuFbAwCjNKr7I.webp)</br>
 we can use Git Rebase, when we are working on branches, which cannot be seen by other developers. And we use Git Merge when the target and source branch can be viewed by other developers or when we want our team to understand logs in a way where they can identify where each commit is coming from.
 
-### ***Build Tools (e.g., Webpack):***
+### **_Build Tools (e.g., Webpack):_**
+
 • What is Webpack, and how does it improve the frontend development workflow?
 
 A powerful module bundler and task runner, Webpack allows developers to bundle multiple JavaScript files, stylesheets, and images into a single file. This optimizes load times and performance, making it suitable for large-scale applications with complex dependencies.</br>
@@ -842,13 +907,15 @@ Webpack will repeat the process until it has all the files and modules needed by
 Once all the files are collected, Webpack will then merge them into one big JavaScript file. This process is also known as the “bundling” process because it commonly generates thebundle.js file that will be served to the browser.
 ![Alt text](1_kIHxJN_8YQ37IRl8EluB7g.webp)
 
-### ***Testing in Frontend Development:***
+### **_Testing in Frontend Development:_**
+
 • What are the benefits of unit testing in a frontend application?
-  - Can detect bugs early
-  - It encourage developers to write cleaner, modular, and more maintainable code. Writing testable code  often leads to better software design practices, such as separation of concerns and encapsulation.
-  - Unit tests act as a safety net during refactoring or adding new features. They provide confidence that existing functionality remains intact even after changes are made. Without unit tests, modifications to code can introduce unexpected regressions, which are difficult to trace and fix.
-  - They act as a form of documentation, making it easier for others to understand the intended behavior of the code.
-  - They provide the necessary confidence to automate the testing and deployment process, ensuring that changes are thoroughly validated before being released to production.</br>
+
+- Can detect bugs early
+- It encourage developers to write cleaner, modular, and more maintainable code. Writing testable code often leads to better software design practices, such as separation of concerns and encapsulation.
+- Unit tests act as a safety net during refactoring or adding new features. They provide confidence that existing functionality remains intact even after changes are made. Without unit tests, modifications to code can introduce unexpected regressions, which are difficult to trace and fix.
+- They act as a form of documentation, making it easier for others to understand the intended behavior of the code.
+- They provide the necessary confidence to automate the testing and deployment process, ensuring that changes are thoroughly validated before being released to production.</br>
 
 • Describe the differences between unit testing and integration testing.
 
@@ -857,8 +924,8 @@ Integration Testing: Primarily for ensuring that integrated components work toge
 
 • How unit testing is done?
 
-  - A test is usually written in a test block.
-  - Inside the test block, the first thing we do is to render the component that we want to test.
-  - Select the elements that we want to interact with
-  - Interact with those elements
-  - Assert that the results are as expected.
+- A test is usually written in a test block.
+- Inside the test block, the first thing we do is to render the component that we want to test.
+- Select the elements that we want to interact with
+- Interact with those elements
+- Assert that the results are as expected.
