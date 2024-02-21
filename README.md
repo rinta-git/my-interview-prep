@@ -174,6 +174,10 @@ font-size: 1em; /_ equal to 16px, relative to parent font size _/
 font-size: 1rem; /_ equal to 16px, relative to base font size _/
 }
 
+• em tag vs i tag
+
+i tag is for adding italics style to text. em tag add italics as well as more emphasis/ importance to the text.
+
 • Variable declaretion in SASS, SCSS, CSS?
 
 ```
