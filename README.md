@@ -78,6 +78,14 @@ display:none and visibility:hidden are two style declarations you can use to hid
 visibility:hidden hides the elements without changing their layouts</br>
 opacity:0 causes the elements to be very transparent but users can still interact with them.</br>
 
+• What is CSS object model?
+
+The CSS Object Model is a set of APIs allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML. It allows users to read and modify CSS style dynamically.
+
+• What is critical rendering path?
+
+The rendering process of the CSS Object Model and the DOM is done within the browser and is called the critical rendering path. It is the process or series of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels that display on the screen.
+
 ### ***CSS Flexbox***
 
 • What is the flexbox model, and how does it work?
