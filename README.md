@@ -341,7 +341,75 @@ Both are for iterating over an array. Map returns an array where forEach returns
 
 • shallow copy vs deep copy
 
+Shallow Copy:
+
+  - Shallow copy creates a new object and copies the references of the original object’s elements into the new object.
+  - The new object references the same memory locations as the original object for its elements.
+  - If any changes are made to the shared elements in the new or original object, the changes will be reflected in both.
+  - Shallow copy is a relatively faster operation and requires less memory.
+  - Shallow copy is suitable when you want to create a new object, but you don’t need independent copies of the elements.
+
+  ```
+  const cars = [{company: 'Maruti', model: 'Alto'}, {company: 'Tata', model: 'Nano'}];
+  const newCars = [...cars]; //shallow copy
+  newCars[0].model = 'Swift';  
+  console.log(newCars); //[{company: 'Maruti', model: 'Swift'}, {company: 'Tata', model: 'Nano'}]
+  console.log(cars); //[{company: 'Maruti', model: 'Swift'}, {company: 'Tata', model: 'Nano'}]
+  ```
+
+Deep Copy:
+
+  - Deep copy creates a new object and recursively copies the elements of the original object, including any objects referenced within it.
+  - The new object has its own memory locations for all the elements, including the referenced objects.
+  - Changes made to the elements in the deep copy do not affect the original object or any other copied objects.
+  - Deep copy is a relatively slower operation and requires more memory, especially for complex data structures.
+  - Deep copy is suitable when you want to create a completely independent copy of an object, including all its nested objects.
+
+  ```
+  const cars2 = [{company: 'Maruti', model: 'Alto'}, {company: 'Tata', model: 'Nano'}];
+  const newCars2 = JSON.parse(JSON.stringify(cars2)) //deep copying
+  newCars2[0].model = 'Benz' 
+  console.log(newCars2); //[{company: 'Maruti', model: 'Benz'}, {company: 'Tata', model: 'Nano'}]
+  console.log(cars2); //[{company: 'Maruti', model: 'Alto'}, {company: 'Tata', model: 'Nano'}]
+  ```
+
 • callback hell
+
+Callback hell is a phenomenon where a Callback is called inside another Callback. It is the nesting of multiple Callbacks inside a function. If you look at the design of the code, it seems just like a pyramid. Thus the Callback hell is also referred to as the ‘Pyramid of Doom’. The callback hell makes it harder to understand and maintain the code. For eg; we need to perform task A. To perform A task, we need some data from the task B. Similarly; we have different tasks that are dependent on each other and execute asynchronously. Thus, it creates a series of callback functions.
+```
+function print(i){
+    window.alert("This is call number "+i);
+}
+
+function fun1(callback){
+    setTimeout(()=>{
+    
+        let i = 1 ;
+        callback(i); i++ ;
+        setTimeout(()=>{
+     
+      	    callback(i); i++;
+      	    setTimeout(()=>{
+        
+        	    callback(i); i++ ;
+        	    setTimeout(()=>{
+          
+          		    callback(i); i++ ;
+          		    setTimeout(()=>{
+            
+            		    callback(i); i++ ;
+            		    // .... and so on
+            		    
+          		    }, 800)
+        	    }, 700)
+      	    }, 500)
+        }, 300)
+    }, 100)
+}
+
+// Calling fun1 with print function as parameter
+fun1(print);
+```
 
 ### \***\*JavaScript Functions:\*\***
 
@@ -799,6 +867,9 @@ export default function Counter() {
 ```
 
 • useCallback() and useMemo() hook ?
+
+useCallback and useMemo hooks are used for improvising the performance of React application. The main difference between useMemo and useCallback hook is, useMemo returns memoized value and useCallback returns memoised function.</br>
+Please refer this document to understand clearly: https://blog.saeloun.com/2022/09/22/difference-between-useCallback-and-useMemo-hooks/
 
 ### **_Redux_**
 
