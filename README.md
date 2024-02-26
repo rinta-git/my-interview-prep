@@ -54,7 +54,19 @@ Setting the viewport to make your website look good on all devices:
 The child nodes of the document fragment are inserted into the DOM where you put the fragment, but the fragment itself is not inserted. It is useful for grouping but don't want parent in DOM. </br>
 On the other hand, when you create an element and append it to the DOM, both the element and its children are appended.
 
+• Diff b/w b and strong
+
+bold just modifies the text, whereas strong tells screen readers that there is emphasis going on.
+
+• Diff heading tag and difference?
+
+```<H1>``` is the largest heading level while ```<H6>``` is the smallest heading level. Help to highlight the most important information. They are also useful for impaired visitors who are using screen readers. html headings can also help to improve your SEO.
+
 ### **_CSS_**
+
+• What is mean by cascading style sheet?
+
+Read this doc https://www.udacity.com/blog/2021/07/what-is-css-cascading-style-sheets-explained.html
 
 • What is the box model in CSS?
 
@@ -106,6 +118,26 @@ Sass is much rich in features than CSS, like variables, nested rules, mixins, im
 
 SCSS uses fewer lines of code than CSS, which makes the code load faster. Standard CSS doesn't support nesting. There is no way to write a class inside another one. SCSS supports nested syntax.
 
+
+• Specificity in css
+
+Think of specificity as a score/rank that determines which style declaration is ultimately applied to an element. Below is the “specificity hierarchy,” which lists selector types from the highest specificity to the lowest specificity.
+
+  1. ID selectors: ID selectors are the most specific kind of selector. They select an element based on its ID attribute (e.g., #my-id).
+  2. Class selectors, attribute selectors, and pseudo-class selectors: These three selector types have equal specificity.
+    - Class selectors select all elements in a CSS class (e.g., .my-class).
+    - Attribute selectors select all elements with a given attribute (e.g., p[target]).
+    - Pseudo-class selectors select elements only when in a special state, like visited or hover (e.g., button:hover).
+  4. Type selectors: These select all HTML elements that have a given node name and have the syntax element (e.g., div).
+  5. Universal selector: The universal selector (*) has no effect on specificity.
+
+Rule 1: The CSS selector with higher specificity applies.
+Rule 2: If CSS selectors have equal specificity, then the last rule in the document applies.
+Rule 3: Inline CSS has the highest specificity.
+
+In CSS, the !important property overrides all other declarations on an element, even inline declarations.
+
+
 ### **_CSS Flexbox_**
 
 • What is the flexbox model, and how does it work?
@@ -149,6 +181,7 @@ Flexbox is 1D. So it can be arranged either in row direction or column direction
 Grid is 2D. It can control both row and column arrangement simultaneusly. It is usefull to create more complex layout.
 
 • Explain the use of the grid-template-columns property.<br />
+
 To set the width of each column in grid. It can be set using grid-template-column:w1 w2 w3 or grid-template-column:repeat(no.Column, width).
 https://www.freecodecamp.org/news/css-grid-tutorial-with-cheatsheet/#the-justify-items-property
 
@@ -209,7 +242,21 @@ $border-dark: rgba($base-color, 0.88)
 }
 ```
 
-### **_JavaScript Basics_**
+### **_JavaScript Basics_**0
+
+What is DOM?
+
+When a web page is loaded, the browser creates a Document Object Model of the page.
+The HTML DOM model is constructed as a tree of Objects:
+![Alt text](pic_htmltree.gif)
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:</br>
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
 
 • What are the types in JS?
 
@@ -321,6 +368,9 @@ In JavaScript, there are three common ways to work with asynchronous operations:
 callback: It is a function that executes after the outer code call has finished running. It is supplied as an input to another function.</br>
 Promise: An object representing eventual completion or failure of an asynchronous operation.</br>
 async/await: It is a JavaScript technology that allows you to create asynchronous code more synchronously. Chaining promises together can become quite clumsy and confusing. For this reason, async and await were developed. It handles promises.
+
+• What is intersection observer in js?
+
 
 • What is `this` keyword in js?
 
@@ -503,6 +553,11 @@ Uncaught TypeError: arrowfn is not a constructor
 
 • adv of arrow function?
 
+- makes the code more readable and reducing the amount of boilerplate code.
+- This value inside an arrow function is automatically inherited from the surrounding context. It eliminates the need to use bind(), call(), or apply() to preserve the this value or deal with this-related issues.
+- Arrow functions are well-suited for callback functions, such as event handlers or asynchronous operations.
+- Arrow functions provide implicit return behavior for concise one-line functions.
+
 • What is function currying?
 
 A function currying will convert a function with multiple arguments into seperate functions with single argument. So curryied function will take only one param at a time but return another function with one arg. It is constructed by chaining closures by immediately returning inner functions simultaneously.
@@ -591,6 +646,35 @@ Options: Read info about the available communication options of the resource</br
 
 ### **_React Basics_**
 
+• Framework vs Library
+
+| Library        | Framework           | 
+| ------------- |:-------------:| -----:|
+| A library is a group of reusable functions and classes which are used by the developers to perform several common tasks.     | A framework is basically a piece of code that dictates the architecture or the structure of our project and also adds in our programs. |
+| While using a library in the program, the user has full control when he uses the functions or classes from the Library.     | In frameworks, code never called into a framework. Instead, the Framework calls you. |
+| 	The Library helps in linking and the binding process | A Framework provides a standard way to develop and deploy applications  |
+| It can be incorporated seamlessly into projects that are in the developing phase. | It cannot be incorporated seamlessly into the developing process. But instead of it, we can use it when we start a new project.  |
+| React,Jqeury | Angular, Vue.js  |
+
+• What is MVC? How it works?
+
+- Model</br>
+The model layer is responsible for the application's data logic and storing and retrieving data from back-end data stores. 
+- View</br>
+The view layer provides the UI necessary to interact with the application. It includes components needed to display the data and enables users to interact with that data. 
+- Controller</br> 
+The controller layer contains the application logic necessary to facilitate communications across the application, acting as an interface between the view and model layers.
+
+![Alt text](Model2.png)
+
+Let’s imagine an end-user sends a request to a server to get a list of students studying in a class. The server would then send that request to that particular controller that handles students. That controller would then request the model that handles students to return a list of all students studying in a class.
+
+The model would query the database for the list of all students and then return that list back to the controller. If the response back from the model was successful, then the controller would ask the view associated with students to return a presentation of the list of students. This view would take the list of students from the controller and render the list into HTML that can be used by the browser.
+
+The controller would then take that presentation and returns it back to the user. Thus ending the request. If earlier the model returned an error, the controller would handle that error by asking the view that handles errors to render a presentation for that particular error. That error presentation would then be returned to the user instead of the student list presentation.
+
+
+
 • What is JSX in React?
 
 JSX is a syntax to write html like syntax in js. It is transpiled or converted before it reaches the JSE. It is done by babel pkg.
@@ -648,8 +732,13 @@ function MyComponent() {
 export default MyComponent;
 
 ```
+• What is error boundary in react
+
+Error boundary is a component in React that catches an error within a component tree and prevents it from crashing the application by showing a fallback user interface.
 
 • React vs JS
+
+React is a JavaScript library for building user interfaces, while JavaScript is a programming language used for various web development tasks. React is built on top of JavaScript and provides a structured approach to building UI components. React offers advantages like improved code organization, enhanced performance with the Virtual DOM, easier state management, and a thriving community, making it a powerful choice for modern web development projects. Many popular websites and apps, including Facebook, Instagram, Airbnb, and Netflix, use React to create responsive and interactive user interfaces.
 
 ### **_React Components_**
 
