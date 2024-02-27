@@ -369,8 +369,9 @@ callback: It is a function that executes after the outer code call has finished 
 Promise: An object representing eventual completion or failure of an asynchronous operation.</br>
 async/await: It is a JavaScript technology that allows you to create asynchronous code more synchronously. Chaining promises together can become quite clumsy and confusing. For this reason, async and await were developed. It handles promises.
 
-• What is intersection observer in js?
-
+• What is intersection observer in js?</br>
+[![Alt text](images.png)](https://youtu.be/2IbRtjez6ag)</br>
+The Intersection Observer API is a browser API which watches for changes that intersect with the viewport and then executes a callback function in the code. It takes 2 params; a callback ffunction and optional object with 3 properties(threshold, root, rootmargin).
 
 • What is `this` keyword in js?
 
