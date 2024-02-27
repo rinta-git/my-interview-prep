@@ -242,7 +242,7 @@ $border-dark: rgba($base-color, 0.88)
 }
 ```
 
-### **_JavaScript Basics_**0
+### **_JavaScript Basics_**
 
 What is DOM?
 
