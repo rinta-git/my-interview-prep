@@ -247,8 +247,8 @@ $border-dark: rgba($base-color, 0.88)
 What is DOM?
 
 When a web page is loaded, the browser creates a Document Object Model of the page.
-The HTML DOM model is constructed as a tree of Objects:
-![Alt text](pic_htmltree.gif)
+The HTML DOM model is constructed as a tree of Objects:</br>
+![Alt text](pic_htmltree.gif)</br>
 With the object model, JavaScript gets all the power it needs to create dynamic HTML:</br>
 JavaScript can change all the HTML elements in the page
 JavaScript can change all the HTML attributes in the page
