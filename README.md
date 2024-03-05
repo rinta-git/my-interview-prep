@@ -461,6 +461,45 @@ function fun1(callback){
 // Calling fun1 with print function as parameter
 fun1(print);
 ```
+• Diff b/w normal script, async, differ
+
+When you load a web page there are two things happening.
+  - html parsing
+  - loading the scripts
+      - fetching the scripts from network
+      - executing scripts line by line
+
+In normal script, html parsing will goes and stops when it encounter a script. Then the scripts will be
+fetched completely and started executing it. After script execution over the html parsing will be continued.</br>
+In async script, html parsing will goes and along with  that scripts will be fetched asynchronously. After
+fetching all the scripts. The html parsing will be stopped and scripts execution starts. After completing
+script execution html parsing will be continued.</br>
+In defer script, html parsing will goes and finish the parsing completely. While doing that scripts will also be fetched asynchronously but scripts will start execution only after html parsin is over.</br>
+![Alt text](adn.jpg)</br>
+• Local storage, session storage, cookies
+
+Web storage api is used for storing data into the browser. This data will be a key value pair of strings.
+There are two ways to store data in browser; one is by localstorage and another is session storage.</br>
+
+Session storage: The data will be only available till the session is available. The session will start as soon as the user visit the website. It will lost the data if the user close the indow or the ta in which the session is available. The session storage has larger capacity than cookies. It can store minimum 5MB of data.</br>
+Local storage: The data will be persisted forever. It won't lost the data if the user closes the window/tab or even shutdown the system. Local storage has higher capacity than session storage. The memory capacity is totaly depends on the device which user is using. It is usefull for AB/testing, optimizing web
+app performance.</br>
+Cookies:The data is stored in the server. So to access it, have to make network call between client and server. The storage capacity is very less, 4000 bytes only.</br>
+
+PS:The storage api follows same origin policy due to security concern. It make sure user is accessing same port, protocol, domain/host.
+Eg; http://abcd.in/data.php</br>
+https://abcd.in/data.php  //protocol changed from http to https. So it is wrong</br>
+http://rinta.in/data.php  //domain changed. So it is wrong.</br>
+http://abcd.in/data.php:8888 //port changed. So it is wrong.</br>
+
+• HOC and HOF
+
+HOC: Takes a component as its argument and returns a new component that wraps the original component.
+It is useful for reusing component logic across multiple components</br>
+It is usefull for authentication, logging data, styling and theming.</br>
+
+HOF: Takes a function as its argument and returns a new function.</br>
+Higher order functions can help improve the legibility of your code by making it more concise and easy to understand. This can help speed up the development process and make it easier to debug code. Second, higher order functions can help organize your code into smaller chunks, making it easier to maintain and extend.</br>
 
 ### \***\*JavaScript Functions:\*\***
 
