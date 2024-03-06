@@ -70,7 +70,7 @@ Read this doc https://www.udacity.com/blog/2021/07/what-is-css-cascading-style-s
 
 • What is the box model in CSS?
 
-For very element, a box is wrapped around them. It has four parts; content, padding, border, margin.
+For very element, a box is wrapped around them. It has four parts; content, padding, border, margin.</br>
 Content: Is the area where text & images are incuded.<br />
 padding: A space around content. It is transparent.<br />
 Border: A border is surrounded to the padding & content.<br />
@@ -90,7 +90,7 @@ Padding is the space between the border and the content. It is usefull to expand
 • CSS display:none and visibility:hidden – What's the Difference?
 
 display:none and visibility:hidden are two style declarations you can use to hide elements on the screen with CSS.</br>
-display:none and visibility:hidden are two style declarations you can use to hide elements on the screen with CSS.</br>
+display:none removes the element as well as the space taen for that element</br>
 visibility:hidden hides the elements without changing their layouts</br>
 opacity:0 causes the elements to be very transparent but users can still interact with them.</br>
 
@@ -125,15 +125,15 @@ Think of specificity as a score/rank that determines which style declaration is 
 
   1. ID selectors: ID selectors are the most specific kind of selector. They select an element based on its ID attribute (e.g., #my-id).
   2. Class selectors, attribute selectors, and pseudo-class selectors: These three selector types have equal specificity.
-    - Class selectors select all elements in a CSS class (e.g., .my-class).
-    - Attribute selectors select all elements with a given attribute (e.g., p[target]).
-    - Pseudo-class selectors select elements only when in a special state, like visited or hover (e.g., button:hover).
+    - Class selectors select all elements in a CSS class (e.g., .my-class).</br>
+    - Attribute selectors select all elements with a given attribute (e.g., p[target]).</br>
+    - Pseudo-class selectors select elements only when in a special state, like visited or hover (e.g., button:hover).</br>
   4. Type selectors: These select all HTML elements that have a given node name and have the syntax element (e.g., div).
   5. Universal selector: The universal selector (*) has no effect on specificity.
 
-Rule 1: The CSS selector with higher specificity applies.
-Rule 2: If CSS selectors have equal specificity, then the last rule in the document applies.
-Rule 3: Inline CSS has the highest specificity.
+Rule 1: The CSS selector with higher specificity applies.</br>
+Rule 2: If CSS selectors have equal specificity, then the last rule in the document applies.</br>
+Rule 3: Inline CSS has the highest specificity.</br>
 
 In CSS, the !important property overrides all other declarations on an element, even inline declarations.
 
@@ -143,7 +143,7 @@ In CSS, the !important property overrides all other declarations on an element, 
 • What is the flexbox model, and how does it work?
 ![Alt text](image-6.png)
 
-It allow us to arrange the divs. The parent should have a display:flex property to consider it as a flexbox model. display:block align the child divs in each line by taing enitre width of the container. But display:flex by default align the child div inline.
+It allow us to arrange the divs. The parent should have a display:flex property to consider it as a flexbox model. display:block align the child divs in each line by taking enitre width of the container. But display:flex by default align the child div inline.
 
 ![Alt text](image-4.png)
 We can set the direction by using flex-direction:row/column property. Bydefault it will be row. Another option to change the order div and the postion by setting flex-direction:row-reverse/column-reverse. All these works on the main axis or x-axis. Even for column. It just make the x-axis to verticaly align.
@@ -156,7 +156,7 @@ The space-between equaly add space between the child divs and fill the container
 
 ![Alt text](image-1.png)
 
-To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch/baseline. Stretch will tae up the entire cross axis for the child div. Baseline, moves childs to up of the cross-axis.
+To align items in cross-axis, use align-items:flex-start/flex-end/centre/stretch/baseline. Stretch will take up the entire cross axis for the child div. Baseline, moves childs to up of the cross-axis.
 To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/stretch/baseline. It affects only to that partiular div not every child div.
 
 ![Alt text](image-5.png)
@@ -178,7 +178,7 @@ To manipulate one of the child divs, use align-self:flex-start/flex-end/centre/s
 • How does CSS Grid differ from Flexbox?
 
 Flexbox is 1D. So it can be arranged either in row direction or column direction. It is useful for creating simple layouts with single row or single column.
-Grid is 2D. It can control both row and column arrangement simultaneusly. It is usefull to create more complex layout.
+Grid is 2D. It can control both row and column arrangement simultaneuosly. It is usefull to create more complex layout.
 
 • Explain the use of the grid-template-columns property.<br />
 
@@ -329,7 +329,7 @@ undefined
 
 Both let and const variables are hoisted. Hoisted means, if we try to access those variables before its initialisation it will throw</br> reference error: variable ** cannot be accessed before its initialisation.</br> It is due to we are trying to access it when they are in temporal deadzone.<i>Temporal dead zone start from variable declaration to initialisation.</i> Both the variable can not be redeclared in the same scope. It will throw</br>
 reference error: variable ** being already declared.</br> Both are block scoped so can not access those variables outside the block. Let variable can be declare first and later initialise with a value.</br>
-const variable must initialised with a value otherwise throw</br> syntax error: missing initializer in const declaration. The value of a const can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.</br>
+const variable must initialised with a value otherwise throw syntax error: missing initializer in const declaration. </br>The value of a const can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.</br>
 Var variable can be redeclared in the same scope. It is functional scoped, so can not accessible outside function. Can declare first and later initialise with a value. It is not hoisted, so accessing before initilisation will return undefined not any errors.
 
 Eg:
@@ -371,7 +371,7 @@ async/await: It is a JavaScript technology that allows you to create asynchronou
 
 • What is intersection observer in js?</br>
 [![Alt text](images.png)](https://youtu.be/2IbRtjez6ag)</br>
-The Intersection Observer API is a browser API which watches for changes that intersect with the viewport and then executes a callback function in the code. It takes 2 params; a callback ffunction and optional object with 3 properties(threshold, root, rootmargin).
+The Intersection Observer API is a browser API which watches for changes that intersect with the viewport and then executes a callback function in the code. It takes 2 params; a callback function and optional object with 3 properties(threshold, root, rootmargin).
 
 • What is `this` keyword in js?
 
@@ -481,12 +481,12 @@ In defer script, html parsing will goes and finish the parsing completely. While
 Web storage api is used for storing data into the browser. This data will be a key value pair of strings.
 There are two ways to store data in browser; one is by localstorage and another is session storage.</br>
 
-Session storage: The data will be only available till the session is available. The session will start as soon as the user visit the website. It will lost the data if the user close the indow or the ta in which the session is available. The session storage has larger capacity than cookies. It can store minimum 5MB of data.</br>
+Session storage: The data will be only available till the session is available. The session will start as soon as the user visit the website. It will lost the data if the user close the window or the ta in which the session is available. The session storage has larger capacity than cookies. It can store minimum 5MB of data.</br>
 Local storage: The data will be persisted forever. It won't lost the data if the user closes the window/tab or even shutdown the system. Local storage has higher capacity than session storage. The memory capacity is totaly depends on the device which user is using. It is usefull for AB/testing, optimizing web
 app performance.</br>
 Cookies:The data is stored in the server. So to access it, have to make network call between client and server. The storage capacity is very less, 4000 bytes only.</br>
 
-PS:The storage api follows same origin policy due to security concern. It make sure user is accessing same port, protocol, domain/host.
+PS:The storage api follows same origin policy due to security concern. It make sure user is accessing same port, protocol, domain/host.</br>
 Eg; http://abcd.in/data.php</br>
 https://abcd.in/data.php  //protocol changed from http to https. So it is wrong</br>
 http://rinta.in/data.php  //domain changed. So it is wrong.</br>
@@ -962,9 +962,9 @@ setEmployee({...employee, age:30})
 
 • What is useReducer()?
 
-It is similar to useState() but it is usefull for more complex logic. This hook accepts 3 args, reducer, initial value, optional initilizer function
-reducer: It tells how action to be done to update state. It accepts state and action as its param.
-initialarg: It is the initial value for state.
+It is similar to useState() but it is usefull for more complex logic. This hook accepts 3 args, reducer, initial value, optional initilizer function</br>
+reducer: It tells how action to be done to update state. It accepts state and action as its param.</br>
+initialarg: It is the initial value for state.</br>
 initializer function: It is for initializing with initial state.
 
 ```
