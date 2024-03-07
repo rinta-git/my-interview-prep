@@ -25,7 +25,7 @@ for(var num of [1,4,3,9,6]){
 //   6
 //   6
 
-//  reference error: variable num2 is not defined
+//  reference error: variable num1 is not defined
 //  1
 //  4
 //  3
