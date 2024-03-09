@@ -62,6 +62,12 @@ bold just modifies the text, whereas strong tells screen readers that there is e
 
 ```<H1>``` is the largest heading level while ```<H6>``` is the smallest heading level. Help to highlight the most important information. They are also useful for impaired visitors who are using screen readers. html headings can also help to improve your SEO.
 
+• What is webworker api in html?
+
+When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
+A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+
+
 ### **_CSS_**
 
 • What is mean by cascading style sheet?
@@ -108,7 +114,9 @@ A CSS preprocessor is a program that lets you generate CSS from the preprocessor
 
 • What is SASS/SCSS preprocessor?
 
-SASS/SCSS is a CSS preprocessor that runs on the server and compiles to CSS code that your browser understands.
+SASS/SCSS is a CSS preprocessor that runs on the server and compiles to CSS code that your browser understands.</br>
+SASS - Syntactically awsome style sheet</br>
+SCSS - Sassy Cascading Style Sheets
 
 • Why to use SASS instead of CSS ?
 
@@ -244,7 +252,7 @@ $border-dark: rgba($base-color, 0.88)
 
 ### **_JavaScript Basics_**
 
-What is DOM?
+• What is DOM?
 
 When a web page is loaded, the browser creates a Document Object Model of the page.
 The HTML DOM model is constructed as a tree of Objects:</br>
@@ -476,6 +484,7 @@ fetching all the scripts. The html parsing will be stopped and scripts execution
 script execution html parsing will be continued.</br>
 In defer script, html parsing will goes and finish the parsing completely. While doing that scripts will also be fetched asynchronously but scripts will start execution only after html parsin is over.</br>
 ![Alt text](adn.jpg)</br>
+
 • Local storage, session storage, cookies
 
 Web storage api is used for storing data into the browser. This data will be a key value pair of strings.
@@ -500,6 +509,48 @@ It is usefull for authentication, logging data, styling and theming.</br>
 
 HOF: Takes a function as its argument and returns a new function.</br>
 Higher order functions can help improve the legibility of your code by making it more concise and easy to understand. This can help speed up the development process and make it easier to debug code. Second, higher order functions can help organize your code into smaller chunks, making it easier to maintain and extend.</br>
+
+• What is typeof null,undefined,number,string,array,object,bigint,symbol and boolean value?
+
+- typeof null = 'object'
+- typeof undefined = 'undefined'
+- typeof 123 = 'number
+- typeof [1,3,2] = 'object'
+- typeof {a:12, b:'fdg'} = 'object'
+- typeof 'hello' = 'string'
+- typeof Symbol = 'function'
+- typeof BigInt = 'function'
+- typeof true = 'boolean'
+
+• What is prototype in js?
+
+- Prototype property is basically an object (also known as Prototype object), where we can attach methods and properties in a prototype object, which enables all the other objects to inherit these methods and properties.
+- JavaScript is a prototype based language, so, whenever we create a function using JavaScript, JavaScript engine adds a prototype property inside a function.
+
+• What is Prototype Inheritance in JavaScript?
+
+- Prototype inheritance in javascript is the linking of prototypes of a parent object to a child object to share and utilize the properties of a parent class using a child class.
+- refere: https://javascript.info/prototype-inheritance
+
+```
+// Creating a parent object as a prototype
+const parent = {
+  greet: function() {
+    console.log(`Hello from the parent`);
+  }
+};
+
+// Creating a child object
+const child = {
+  name: 'Child Object'
+};
+
+// Performing prototype inheritance
+child.__proto__ = parent;
+
+// Accessing the method from the parent prototype
+child.greet(); // Outputs: Hello from the parent
+```
 
 ### \***\*JavaScript Functions:\*\***
 
@@ -686,6 +737,17 @@ Options: Read info about the available communication options of the resource</br
 
 ### **_React Basics_**
 
+• JS vs JSX
+- .js file contains only javascript.
+- .jsx file will have both js and jsx. JSX is a syntactic sugar of the React.createElement() method, that allows developers to write a JS inside HTML.
+
+What is JSON?
+
+- Javascript object notation
+- JSON is the replacement of the XML data exchange format in JSON.
+- It is light-weighted and supported by almost every language and OS.
+- JSON stores all the data in an array so data transfer makes easier. 
+
 • Framework vs Library
 
 | Library        | Framework           | 
@@ -780,6 +842,30 @@ Error boundary is a component in React that catches an error within a component 
 
 React is a JavaScript library for building user interfaces, while JavaScript is a programming language used for various web development tasks. React is built on top of JavaScript and provides a structured approach to building UI components. React offers advantages like improved code organization, enhanced performance with the Virtual DOM, easier state management, and a thriving community, making it a powerful choice for modern web development projects. Many popular websites and apps, including Facebook, Instagram, Airbnb, and Netflix, use React to create responsive and interactive user interfaces.
 
+• Dependencies vs Dev dependecy vs Peer dependency?
+
+  - Dependencies are the packages that your project directly depends on to run in production.
+  - Dev Dependencies are the packages a developer needs during development. 
+  - Peer dependencies are packages your package relies on but expects the consumer to provide. Peer Dependencies are not automatically installed. You need to manually modify your package.json file in order to add a Peer Dependency.
+  ```
+  "peerDependencies": {
+  "react": "¹⁷.0.0",
+  "react-dom": "¹⁷.0.0"
+  }
+  ```
+
+• Difference between tilde ( ~ ) and caret ( ^ ) in package.json
+
+- The tilde (~) notation is employed to match the latest patch version while freezing the major and minor versions.
+```
+Example: The ~1.2.0 will update all the future patch updates. We have to write just ~1.2.0 and all the next patch update dependencies. For example, 1.2.1, 1.2.2, 1.2.5……………1.2.x.
+```
+
+- The caret ( ^ ) automatically updates both minor and patch updates.
+```
+Example: The ^1.2.4 will update all the future Minor and patch updates, for example, ^1.2.4 will automatically change the dependency to 1.x.x if any update occurs. 
+```
+![Alt text](Presentation1-660x371.png)
 ### **_React Components_**
 
 • Differentiate between functional and class components in React.
