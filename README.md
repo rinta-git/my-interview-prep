@@ -750,13 +750,19 @@ What is JSON?
 
 • Framework vs Library
 
-| Library                            | Framework                             | 
-| ---------------------------------- |:-------------------------------------:| -----:|
-| A library is a group of reusable functions and classes which are used by the developers to perform  several common tasks. | A framework is basically a piece of code that dictates the architecture or the structure of our project and also adds in our programs. |
-| While using a library in the program, the user has full control when he uses the functions or classes from the Library.     | In frameworks, code never called into a framework. Instead, the Framework calls you. |
-| 	The Library helps in linking and the binding process | A Framework provides a standard way to develop and deploy applications  |
-| It can be incorporated seamlessly into projects that are in the developing phase. | It cannot be incorporated seamlessly into the developing process. But instead of it, we can use it when we start a new project.  |
-| React,Jqeury | Angular, Vue.js  |
+--- Library ---
+- A library is a group of reusable functions and classes which are used by the developers to perform  several common tasks. 
+- While using a library in the program, the user has full control when he uses the functions or classes from the Library.
+- The Library helps in linking and the binding process.
+- It can be incorporated seamlessly into projects that are in the developing phase.
+- React,Jqeury
+
+--- Framework ---
+- A framework is basically a piece of code that dictates the architecture or the structure of our project and also adds in our programs.
+- In frameworks, code never called into a framework. Instead, the Framework calls you.
+- A Framework provides a standard way to develop and deploy applications.
+- It cannot be incorporated seamlessly into the developing process. But instead of it, we can use it when we start a new project.
+- Angular, Vue.js 
 
 • What is MVC? How it works?
 
