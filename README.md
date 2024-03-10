@@ -793,7 +793,7 @@ State in react is a local variable to maintane the state in component. useState(
 
 • What is context api?
 
-context api is used to avaoid prop drilling. When we want to pass a prop down to the deeply nested component, it is very difficult and unneccessory to pass that in every other coponent which is not using that. This can be avoided using context api.
+context api is used to avoid prop drilling. When we want to pass a prop down to the deeply nested component, it is very difficult and unneccessory to pass that in every other component which is not using that. This can be avoided using context api.
 Context API consists of two main components: the context provider and the context consumer. The provider is responsible for creating and managing the context, which holds the data to be shared between components. On the other hand, the consumer is used to access the context and its data from within a component.
 
 ```
