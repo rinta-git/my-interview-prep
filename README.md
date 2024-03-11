@@ -145,6 +145,7 @@ Rule 3: Inline CSS has the highest specificity.</br>
 
 In CSS, the !important property overrides all other declarations on an element, even inline declarations.
 
+• Difference between position:absolute, relative, static and fixed
 
 ### **_CSS Flexbox_**
 
@@ -431,7 +432,7 @@ Deep Copy:
 
 • callback hell
 
-Callback hell is a phenomenon where a Callback is called inside another Callback. It is the nesting of multiple Callbacks inside a function. If you look at the design of the code, it seems just like a pyramid. Thus the Callback hell is also referred to as the ‘Pyramid of Doom’. The callback hell makes it harder to understand and maintain the code. For eg; we need to perform task A. To perform A task, we need some data from the task B. Similarly; we have different tasks that are dependent on each other and execute asynchronously. Thus, it creates a series of callback functions.
+Callback hell is a phenomena where a Callback is called inside another Callback. It is the nesting of multiple Callbacks inside a function. If you look at the design of the code, it seems just like a pyramid. Thus the Callback hell is also referred to as the ‘Pyramid of Doom’. The callback hell makes it harder to understand and maintain the code. For eg; we need to perform task A. To perform A task, we need some data from the task B. Similarly; we have different tasks that are dependent on each other and execute asynchronously. Thus, it creates a series of callback functions.
 ```
 function print(i){
     window.alert("This is call number "+i);
@@ -501,8 +502,7 @@ http://abcd.in/data.php:8888 //port changed. So it is wrong.</br>
 • HOC and HOF
 
 HOC: Takes a component as its argument and returns a new component that wraps the original component.
-It is useful for reusing component logic across multiple components</br>
-It is usefull for authentication, logging data, styling and theming.</br>
+It is useful for reusing component logic across multiple components.It is usefull for authentication, logging data, styling and theming.</br>
 
 HOF: Takes a function as its argument and returns a new function.</br>
 Higher order functions can help improve the legibility of your code by making it more concise and easy to understand. This can help speed up the development process and make it easier to debug code. Second, higher order functions can help organize your code into smaller chunks, making it easier to maintain and extend.</br>
