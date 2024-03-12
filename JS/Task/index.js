@@ -17,11 +17,33 @@ console.log(result)
 
 //WAP to reverse a string using recursion
 const reverse = function (str){
-    return str === '' ? '' : reverse(str.substr(1)) + str.charAt(0);
+    return str === '' ? '' : reverse(str.substr(1)) + str.charAt(0);  
+    //or
+    // return str === '' ? '' : reverse(str.slice(1)) + str[0];
 }
 
 let reversedStr = reverse('rinta')
 console.log(reversedStr)
+
+/**
+ * Callstack execution
+ * reverse('rinta')
+ * reverse('inta') + 'r'
+ * reverse('nta') + 'i'
+ * reverse('ta') + 'n'
+ * reverse('a') + 't'
+ * reverse('') + 'a'
+ * 
+ * => 
+ * a
+ * at
+ * atn
+ * atni
+ * atnir * 
+ */
+
+
+
 
 //WAP to reverse a string 
 let str = 'Good Morning';
